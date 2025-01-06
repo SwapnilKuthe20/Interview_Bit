@@ -1,0 +1,21 @@
+# What is Git?
+#  What is a repository in Git?
+# What is the difference between Git and GitHub?
+# What is origin in Git?
+# What is the purpose of the .gitignore file?
+# What is a version control system (VCS)?
+# What is the git push command?
+# What is the git pull command?
+# What does git clone do?
+# What are the advantages of using GIT?
+# What is the difference between git init and git clone?
+# What is git add?
+# What is git status?
+# What is a commit in Git?
+# What is a ‘conflict’ in git?
+# How do you change the last commit in git?
+# What is `git checkout`?
+# How do you switch branches in Git?
+# How to resolve a conflict in Git?
+# How do you add a file to the staging area?
+Use `git add <file_name>` to add a file to the staging area, forming it ready for a commit.
