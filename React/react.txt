@@ -219,11 +219,11 @@ Hooks make functional components more powerful. Common hooks are useState, useEf
     but class component had complex patterns like this binding.
  2. Hooks reduce boilerplate code, which makes component more readable and easier to maintain.
 
-#  What are the rules that must be followed while using React Hooks?
- 1. React Hooks must be called only at the top level of a componnet. 
- 2. We should not call hooks inside the loops, conditions and nested functions.
- 3. Hooks are only used in Functional Components and not in Class Component.
- 4. We can use hooks inside React functional components or custom hooks but we can not use in regular JavaScript functions.
+#  What are the rules/ best practices that must be followed while using React Hooks ?
+ 1. Hooks must be called only at the top level of a componnet. 
+ 2. Avoid using hooks inside the loops, conditions and nested functions.
+ 3. Hooks are only used inside React Functional Components or Custom hooks but can not use in regular JavaScript functions.
+ 4. We cannot use hooks inside Class Component
 
 # useState hook ?
  useState is a hook that allows us to add state to functional components.
