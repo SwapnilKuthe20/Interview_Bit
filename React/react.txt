@@ -1,3 +1,4 @@
+:: Basics ::
 
 # What is React ?
  React is a JavaScript library used for building user interfaces,
@@ -5,7 +6,7 @@ Primmarily used for building single-page applications. It’s maintained by Face
 and It follows component-based architecture for building reusable UI component.
 
 # What are the major features of React?
-The major features of React are:
+ The major features of React are:
 Uses JSX syntax, a syntax extension of JS that allows developers to write HTML in their JS code.
 It uses Virtual DOM instead of Real DOM considering that Real DOM manipulations are expensive.
 Supports server-side rendering which is useful for Search Engine Optimizations(SEO).
@@ -38,11 +39,11 @@ and place them in the DOM without using functions like appendChild() or createEl
 Behind the scenes, JSX gets transpiled into JavaScript using tools like Babel.
 
 #  What are React Fragments?
-React Fragments allows us to group a list of children without adding extra nodes to the DOM.
+ React Fragments allows us to group a list of children without adding extra nodes to the DOM.
 To prevent unnecessorily adding extra nodes to the DOM.
 
 # Why fragments are better than container divs ?
-Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
+ Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
 
 
 # What is the Virtual DOM ?
@@ -73,7 +74,7 @@ This approach makes React faster because interacting with the Real DOM directly 
  Real DOM : If updated directly, the entire list might re-render, leading to slower performance.]
 
 # What is Reconciliation ?
-Reconciliation is the process through which React updates the Browser DOM and makes React work faster. React use a diffing algorithm so that
+ Reconciliation is the process through which React updates the Browser DOM and makes React work faster. React use a diffing algorithm so that
 component updates are predictable and faster. React would first calculate the difference between the real DOM and the copy of DOM (Virtual DOM) 
 when there's an update of components. React stores a copy of Browser DOM which is called Virtual DOM. When we make changes or add data, 
 React creates a new Virtual DOM and compares it with the previous one. This comparison is done by Diffing Algorithm. 
@@ -84,9 +85,11 @@ leaving the rest nodes as it is. This process is called Reconciliation.
 
 # What is difference between element and component in React ?
 Element :: 
-An Element is a simple object that describes what you want to show on the screen. 
+ An Element is a simple object that describes what you want to show on the screen. 
 It defines the structure of DOM nodes or other components. Elements can include other Elements in their properties. 
 Once created, Elements cannot be changed. Creating a React Element is a straightforward and inexpensive operation.
+
+:: Component ::
 
 # What is Component ? 
  React applications are built using components:
@@ -101,10 +104,10 @@ Functional components are simpler and more straightforward compared to class com
 Unlike class components, functional components don’t use this.
 
 # Functioanl components are stateless or statefull ?
-Initially, functional components were stateless, but with the introduction of React Hooks in React 16.8, they can now manage state and lifecycle logic.
+ Initially, functional components were stateless, but with the introduction of React Hooks in React 16.8, they can now manage state and lifecycle logic.
 
 # Advantages of functional component ?
-Simpler Code: Syntax is simple.
+ Simpler Code: Syntax is simple.
 Performance: Performance is high as they don't involve complex lifecycle methods.
 Hooks Integration: Hooks allow functional components to handle state and side effects effectively.
 
@@ -136,49 +139,49 @@ But even there are some reasons to use Class components over Function components
 If the existing codebase is built using class components, it might make sense to continue using them for consistency and easier maintenance.
 
 # What is State in React ?
-State is a built-in object in React that holds component-specific data. 
+ State is a built-in object in React that holds component-specific data. 
 It represents the mutable values that can change over time.
 When the state of a component changes, React re-renders the component to reflect the updated data.
 
 #  What is props in React ?
-Props (short for properties) are used to pass data from a parent component to a child component. 
+ Props (short for properties) are used to pass data from a parent component to a child component. 
 Props are read-only and cannot be modied by the child component. 
 They are passed as attributes to the child component in JSX.
 
 # Why you can't update props in React?
-In React, you cannot directly update props because they are read-only and passed from a parent component to a child component. 
+ In React, you cannot directly update props because they are read-only and passed from a parent component to a child component. 
 Props are meant to be immutable to ensure a predictable and one-way data flow, which helps maintain component consistency and avoid unexpected behavior.
 
 # What is the difference between state and props ?
-State can be changed over time.
+ State can be changed over time.
 Props are immutable.
 
 # Explain how lists are created in React?
-Lists are essential for displaying dynamic content on a website. In React, 
+ Lists are essential for displaying dynamic content on a website. In React, 
 you can create a list using the method of an array.
 
 # What is the purpose of keys in React lists ?
-Keys are used in React lists to give each item a unique identier. 
+ Keys are used in React lists to give each item a unique identier. 
 They help React identify which items have changed, been added, or been removed in a list, 
 improving performance and avoiding unnecessary re-rendering of components.
 
 # What is the impact of indexes as keys?
-In React, using indexes as keys for list items is not ideal because they don’t uniquely represent the data. 
+ In React, using indexes as keys for list items is not ideal because they don’t uniquely represent the data. 
 Index-based keys are unstable and can cause issues when items are added, removed, or reordered, leading to performance problems and unexpected bugs. 
 For better performance and maintainability, it’s recommended to use unique identifiers (e.g., IDs) as keys, ensuring stable and predictable behavior.
 
 # What are controlled components?
-In React, controlled components are components where the React state controls the form elements' values. 
+ In React, controlled components are components where the React state controls the form elements' values. 
 This means the form element's data is handled by the component's state.
 Here we use event handlers like onChange to update the state whenever the user interacts with the form element.
 
 # What are uncontrolled components?
-In ReactJS, uncontrolled components are components where the form data is handled by the DOM itself rather than being managed by React state.
+ In ReactJS, uncontrolled components are components where the form data is handled by the DOM itself rather than being managed by React state.
 In an uncontrolled component, the form element manages its own state internally. 
 Here Refs are used to access form input values after the user interacts with them.
 
 # What is the difference between controlled and uncontrolled components in React ?
-In a controlled component, the value of the form elements is controlled by React. 
+ In a controlled component, the value of the form elements is controlled by React. 
 The component's state is used to manage the value, and any changes to the value are handled by updating the state. 
 In an uncontrolled component, the value of the form elements is managed by the DOM itself, and React doesn't control or track the value
 
@@ -197,31 +200,45 @@ Use Uncontrolled Components::
 Conditional rendering in React allows you to render different content or components based on certain conditions or state. 
 It enables dynamic rendering and helps in creating responsive and interactive UIs.
 
+:: Hooks ::
+
 # What are hooks in React ?
-React hooks are functions that allow functional components to use state, and other React features.
-Before hooks, state and lifecycle features were only available in class components. Hooks make functional components more powerful.
-Common hooks include useState, useEffect, useContext, useReducer, and useRef.
+ React hooks are functions that allow functional components to manage state, handle side effects, and access other React features like lifecycle methods.
+Before hooks, state and lifecycle methods were only available in class components. 
+Hooks make functional components more powerful. Common hooks are useState, useEffect, useContext, useReducer, useRef and Custom Hooks.
+
+ useState: To manage state in functional components.
+ useEffect: To handle side effects like data fetching or subscriptions.
+ useContext: To consume React Context.
+ useReducer: For complex state management, similar to Redux-like reducers.
+ useRef: To access DOM elements or persist mutable values.
+ Custom Hooks: Developers can create their own hooks to encapsulate reusable logic.
+
+# Why Were Hooks Introduced ?
+ 1. Before hooks, functional components were stateless, managing state and lifecycle methods were available only in class components,
+    but class component had complex patterns like this binding.
+ 2. Hooks reduce boilerplate code, which makes component more readable and easier to maintain.
 
 #  What are the rules that must be followed while using React Hooks?
-There are 2 rules :
-1.React Hooks must be called only at the top level. It is not allowed to call them
-  inside the nested functions, loops, or conditions.
-2. It is allowed to call the Hooks only from the React Function Components
+ 1. React Hooks must be called only at the top level of a componnet. 
+ 2. We should not call hooks inside the loops, conditions and nested functions.
+ 3. Hooks are only used in Functional Components and not in Class Component.
+ 4. We can use hooks inside React functional components or custom hooks but we can not use in regular JavaScript functions.
 
 # useState hook ?
-useState is a hook that allows us to add state to functional components.
+ useState is a hook that allows us to add state to functional components.
 It enables your component to "remember" values between renders.
 It returns an array with two elements: first current state value and second function to update the state.
 
 #  useEffect() Hook ?
-The useEffect() Hook is used to perform side effects in functional components.
+ The useEffect() Hook is used to perform side effects in functional components.
 It is used to perform operations like data fetching, subscriptions, or directly interacting with the DOM.
 The useEffect() Hook runs after every render by default.
 It can also return a cleanup function to clean up effects when the component unmounts or before it re-runs the effect.
 It replaces the lifecycle methods like componentDidMount(), componentDidUpdate(), and componentWillUnmount(). 
 
 # How does useEffect() work ?
-useEffect() takes two arguments:
+ useEffect() takes two arguments:
 A callback function where the side effect logic resides.
 An optional dependency array to control when the effect runs.
 
@@ -230,43 +247,43 @@ With an empty dependency array --> Runs only once, like componentDidMount.
 With specific dependencies --> Runs when the count value changes.
 
 # What is the useContext() hooks in React ?
-In React, useContext is a hook that allows you to access and consume values from a Context. 
+ In React, useContext is a hook that allows you to access and consume values from a Context. 
 Context provides a way to share data between components without having to explicitly pass props through every level of the component tree.
 This is especially useful for managing global states like user authentication or theme settings.
 
 OR
 
-React Context is a way to manage and share data across different components in your application without using props-drilling.
+ React Context is a way to manage and share data across different components in your application without using props-drilling.
 It is useful for global data like user authentication or theme settings, that needs to be accessible in multiple parts of your app.
 You create a context using React.createContext, 
 provide the context value using a Provider, 
 and then use a Consumer or the useContext hook to access that data.
 
 # What is the React Context API and when is it useful?
-The React Context API provides a way to share data across a component tree without manually passing props down through every level. 
+ The React Context API provides a way to share data across a component tree without manually passing props down through every level. 
 It is useful when you have data that needs to be accessed by multiple components at different levels in the component hierarchy.
 
 # What is Prop Drilling in React?
-Prop drilling refers to the practice of passing data (props) from a parent component down to deeply nested child components, 
+ Prop drilling refers to the practice of passing data (props) from a parent component down to deeply nested child components, 
 even if intermediate components do not need the data.
 
 # What are Pure Components ?
-A Pure Component in React is a component that renders the same output for the same input props and state.
+ A Pure Component in React is a component that renders the same output for the same input props and state.
 In function components, you can achieve these pure components through memoized React.memo() API wrapping around the component. 
 This API prevents unnecessary re-renders by comparing the previous props and new props using shallow comparison. 
 So it  helps optimize performance by preventing unnecessary re-renders.
 
-In class components, the components extending React.PureComponent instead of React.Component become the pure components.
+ In class components, the components extending React.PureComponent instead of React.Component become the pure components.
 When props or state changes, PureComponent will do a shallow comparison on both props and state by invoking shouldComponentUpdate() lifecycle method.
 
 :: OR ::
-The PureComponent is a base class in React that automatically
+ The PureComponent is a base class in React that automatically
 implements the shouldComponentUpdate() method with a shallow prop
 and state comparison. It helps in optimizing performance by preventing
 unnecessary re-renders when the prop and state values haven't changed.
 
 # What is the difference between HTML and React event handling?
-Below are some of the main differences between HTML and React event handling,
+ Below are some of the main differences between HTML and React event handling,
 
 In HTML, the event name usually represents in lowercase as a convention:
 <button onclick="activateLasers()"></button>
@@ -289,11 +306,11 @@ function handleClick(event) {
 In HTML, you need to invoke the function by appending () Whereas in react you should not append () with the function name.
 
 # What are synthetic events in React ?
-Synthetic events in React are objects that wrap native browser events to ensure consistency across different browsers. 
+ Synthetic events in React are objects that wrap native browser events to ensure consistency across different browsers. 
 React uses its own event system, which is implemented as a cross-browser wrapper around the browser's native event system. 
 This abstraction layer provides a unified interface to handle events in a predictable way, regardless of the browser.
 
-Synthetic events have properties and methods similar to the native event, like preventDefault(), stopPropagation(), and target.
+ Synthetic events have properties and methods similar to the native event, like preventDefault(), stopPropagation(), and target.
 Common Methods and Properties:
 preventDefault(): Prevents the default action of the event.
 stopPropagation(): Stops the event from bubbling up the DOM tree.
@@ -303,51 +320,51 @@ target: Refers to the element that triggered the event.
 This makes it easier to write cross-browser-compatible event handling code. }
 
 # What is Lifting State Up in Reactjs ?
-Lifting State Up in React refers to the process of moving the state from a child component to its closest common parent component 
+ Lifting State Up in React refers to the process of moving the state from a child component to its closest common parent component 
 so that the state can be shared and managed by multiple child components.
 That means if two child components share the same data from its parent, then move the state to parent instead of
 maintaining local state in both of the child components.
 This is a common pattern in React for enabling components to communicate and share state effectively.
 
 # What are Higher-Order Components ?
-Higher-Order Components (HOCs) in React are advanced techniques for reusing component logic. A Higher-Order Component is a component
+ Higher-Order Components (HOCs) in React are advanced techniques for reusing component logic. A Higher-Order Component is a component
 that takes a component as an argument and returns a new component. It is used to add reusable functionality to components.
 It is similar to the design pattern of higher-order functions in JavaScript.
 We call them pure components because They do not mutate the original component but return a new one.
 
 # realtime example of HOC ?
-HOCs can be used in real-world scenarios, such as restricting access to certain parts of an application based on user authentication status.
+ HOCs can be used in real-world scenarios, such as restricting access to certain parts of an application based on user authentication status.
 Incase if we want to restrict access to a dashboard component. Only authenticated users should be able to view it. 
 If a user is not authenticated, they should be redirected to a login page.
 
 # Why React uses className over class attribute ?
-React uses the className attribute over the class attribute primarily to avoid conflicts with JavaScript's reserved keyword class.
+  React uses the className attribute over the class attribute primarily to avoid conflicts with JavaScript's reserved keyword class.
 
 # What are stateless components ?
-stateless components are functional components that do not manage or maintain state. 
+ stateless components are functional components that do not manage or maintain state. 
 They simply take props and render UI based on those props. Stateless components are simple and efficient because 
 they do not have to manage state or lifecycle methods.
 
 # What are stateful components in reactjs ?
-Stateful components in ReactJS are components that manage and maintain their own state.  
+ Stateful components in ReactJS are components that manage and maintain their own state.  
 Stateful components allow you to track dynamic data over time and can re-render the component when that state changes.
 The state in a React component is a JavaScript object that determines how the component renders and behaves.
 
-Stateful components hold local state that can be updated based on user actions or other events. 
+ Stateful components hold local state that can be updated based on user actions or other events. 
 For example, when a user inputs data, clicks a button, or performs an action that modifies the component's state.
 
 # Manage State in Class Component ?
-Previously, stateful components were built using class components with state and this.setState() methods.
+ Previously, stateful components were built using class components with state and this.setState() methods.
 
 # How to use styles in React ?
-The style attribute accepts a JavaScript object with camelCased properties rather than a CSS string. 
+ The style attribute accepts a JavaScript object with camelCased properties rather than a CSS string. 
 This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
 
 # How do you conditionally render components ?
-Using && Operator and Using Conditional Rendering Elements
+ Using && Operator and Using Conditional Rendering Elements
 
 # Why should component names start with capital letter ?
-developers can easily differentiate between HTML elements and React components.
+ developers can easily differentiate between HTML elements and React components.
 
 
 
