@@ -156,6 +156,13 @@ Props are meant to be immutable to ensure a predictable and one-way data flow, w
  State can be changed over time.
 Props are immutable.
 
+# What is Lifting State Up in Reactjs ?
+ lifting state up means Sometimes, you want the state of two components to always change together. To do it, remove state from both of them, 
+move it to their closest common parent, and then pass it down to them via props. 
+
+That means if two child components share the same data from its parent, then move the state to parent instead of
+maintaining local state in both of the child components.
+
 # Explain how lists are created in React?
  Lists are essential for displaying dynamic content on a website. In React, 
 you can create a list using the method of an array.
@@ -226,46 +233,46 @@ Hooks make functional components more powerful. Common hooks are useState, useEf
  4. We cannot use hooks inside Class Component
 
 # useState hook ?
- useState is a hook that allows us to add state to functional components.
+ useState is a hook is used to add and manage state in functional components.
+useState accept initial state and return array with 2 values first current state and second function to update the state.
 It enables your component to "remember" values between renders.
-It returns an array with two elements: first current state value and second function to update the state.
 
 #  useEffect() Hook ?
  The useEffect() Hook is used to perform side effects in functional components.
-It is used to perform operations like data fetching, subscriptions, or directly interacting with the DOM.
+It is used to perform operations like fetching data from api, subscriptions, or directly interacting with the DOM.
 The useEffect() Hook runs after every render by default.
 It can also return a cleanup function to clean up effects when the component unmounts or before it re-runs the effect.
 It replaces the lifecycle methods like componentDidMount(), componentDidUpdate(), and componentWillUnmount(). 
 
 # How does useEffect() work ?
  useEffect() takes two arguments:
-A callback function where the side effect logic resides.
+A callback function where we perform side effect logic.
 An optional dependency array to control when the effect runs.
 
 Without a dependency array --> Runs after every render.
-With an empty dependency array --> Runs only once, like componentDidMount.
-With specific dependencies --> Runs when the count value changes.
+With an empty dependency array --> Runs only once, When the component is render... like componentDidMount.
+With specific dependencies --> Runs when the state value changes.
 
-# What is the useContext() hooks in React ?
- In React, useContext is a hook that allows you to access and consume values from a Context. 
+# What is the purpose of useContext() hooks in React ?
+ useContext hook is used to access value of a React Context within a Functional Component. 
 Context provides a way to share data between components without having to explicitly pass props through every level of the component tree.
 This is especially useful for managing global states like user authentication or theme settings.
 
-OR
-
- React Context is a way to manage and share data across different components in your application without using props-drilling.
-It is useful for global data like user authentication or theme settings, that needs to be accessible in multiple parts of your app.
-You create a context using React.createContext, 
-provide the context value using a Provider, 
-and then use a Consumer or the useContext hook to access that data.
-
-# What is the React Context API and when is it useful?
- The React Context API provides a way to share data across a component tree without manually passing props down through every level. 
+# What is the React Context and when is it useful?
+ The React Context provides a way to pass data across/through the component tree without manually passing props down through every level. 
 It is useful when you have data that needs to be accessed by multiple components at different levels in the component hierarchy.
 
+# Can you update the context value using the useContext hook?
+ No, the useContext hook is used to consume context values, not to update them. To update the context value, 
+ you need to modify the provider's state and pass a new value. 
+
+# Can you use useContext without a provider?
+ No, if a component calls useContext without wrapping its parent tree in a corresponding <Provider>, 
+ it will use the default value defined during the context's creation.
+
 # What is Prop Drilling in React?
- Prop drilling refers to the practice of passing data (props) from a parent component down to deeply nested child components, 
-even if intermediate components do not need the data.
+ Prop drilling means passing data (props) from a parent component down to deeply nested child components, 
+ even if intermediate components do not need the data.
 
 # What are Pure Components ?
  A Pure Component in React is a component that renders the same output for the same input props and state.
@@ -319,13 +326,6 @@ target: Refers to the element that triggered the event.
 { Unified Interface: Synthetic events provide a consistent API for all event types, similar to the DOM Event interface. 
 This makes it easier to write cross-browser-compatible event handling code. }
 
-# What is Lifting State Up in Reactjs ?
- Lifting State Up in React refers to the process of moving the state from a child component to its closest common parent component 
-so that the state can be shared and managed by multiple child components.
-That means if two child components share the same data from its parent, then move the state to parent instead of
-maintaining local state in both of the child components.
-This is a common pattern in React for enabling components to communicate and share state effectively.
-
 # What are Higher-Order Components ?
  Higher-Order Components (HOCs) in React are advanced techniques for reusing component logic. A Higher-Order Component is a component
 that takes a component as an argument and returns a new component. It is used to add reusable functionality to components.
@@ -367,6 +367,10 @@ This is consistent with the DOM style JavaScript property, is more efficient, an
  developers can easily differentiate between HTML elements and React components.
 
 
+
+
+Note : HTML, form data usually handled by the DOM.
+	React, Form data usually handled by the Component.
 
 
 
