@@ -370,9 +370,10 @@ This is consistent with the DOM style JavaScript property, is more efficient, an
 
 
 Note : HTML, form data usually handled by the DOM.
-	React, Form data usually handled by the Component.
+       React, Form data usually handled by the Component.
 
-
+Note : In Simple application --> we use Browser Router
+       In Complex application --> we use Create Browser Router (React Router Dom)
 
 
 
