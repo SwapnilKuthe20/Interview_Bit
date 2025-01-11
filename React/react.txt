@@ -387,9 +387,15 @@ It simplifies Redux patterns and reduces the complexity that comes with setting 
 
 :: Understand Key Concepts ::
 	State: The data or variables your application uses.
-	Action: A plain object describing what happened (e.g., { type: 'increment' }).
+	Action: A plain object describe events in the application.
 	Reducer: A function that updates the state based on the action.
 	Store: A centralized place to store your app's state.
+	useSelector: A hook to access the Redux state in a component.
+	useDispatch: A hook to dispatch actions (e.g., increment or decrement).
+	Slice: A collection of reducer logic and actions for a single feature, introduced by Redux Toolkit for simplicity.
+	createSlice: Combines actions and reducers in one place.
+	state: The current state of the slice.
+	action: The action object, which contains a payload (for successful actions) or an error (for failed actions).
 
 :: Redux --> Steps
    1. Configure / create Store
@@ -413,8 +419,15 @@ Summary ::
   Use the React-Redux useSelector/useDispatch hooks in React components
 	Read data from the store with the useSelector hook
 	Get the dispatch function with the useDispatch hook, and dispatch actions as needed
+	
+::: Flow of Redux ::
+  When you click the buttons:
+	The dispatch sends an action (e.g., { type: 'counter/increment' }) to the store.
+	The store uses the counterSlice.reducer to update the state.
+	The useSelector hook retrieves the updated state, and React re-renders the component with the new state.
 
 ---------------------------------------------------------------------------------------------------------------------------
+
 Note : HTML, form data usually handled by the DOM.
        React, Form data usually handled by the Component.
 
