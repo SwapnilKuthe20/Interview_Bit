@@ -375,6 +375,15 @@ Note : HTML, form data usually handled by the DOM.
 Note : In Simple application --> we use Browser Router
        In Complex application --> we use Create Browser Router (React Router Dom)
 
+Note : Why Use [name] in the [ ] during Form Handling?
+	Computed Property Names ::
+	In JavaScript, when you use square brackets ([ ]) inside an object, it allows you to compute the key dynamically. 
+	This is called computed property names.
 
+       Why Is name Important in React?
+	Dynamic Key for State Updates:
+	It allows you to handle multiple inputs with a single state and onChange handler.
+	Without the name attribute, you'd need separate handlers for each input.
 
-
+   Uncontrolled Components
+	Use ref to directly access DOM elements for form data.
