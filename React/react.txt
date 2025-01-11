@@ -383,7 +383,13 @@ It provides utility functions that help reduce the boilerplate code, such as cre
 It encourages best practices and is designed to make Redux development faster and easier.
 In short, Redux Toolkit is built on top of Redux and makes it easier and more efficient to work with Redux. 
 It simplifies Redux patterns and reduces the complexity that comes with setting up and using Redux in an application.
+---------------------------------------------------------------------------------------------------------------------------
 
+:: Understand Key Concepts ::
+	State: The data or variables your application uses.
+	Action: A plain object describing what happened (e.g., { type: 'increment' }).
+	Reducer: A function that updates the state based on the action.
+	Store: A centralized place to store your app's state.
 
 :: Redux --> Steps
    1. Configure / create Store
