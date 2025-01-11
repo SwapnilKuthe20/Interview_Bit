@@ -1,3 +1,4 @@
+
 :: Basics ::
 
 # What is React ?
@@ -206,7 +207,7 @@ Use Uncontrolled Components::
 #  What is conditional rendering in React ?
 Conditional rendering in React allows you to render different content or components based on certain conditions or state. 
 It enables dynamic rendering and helps in creating responsive and interactive UIs.
-
+-----------------------------------------------------------------------------------------------------------------------------------
 :: Hooks ::
 
 # What are hooks in React ?
@@ -365,10 +366,49 @@ This is consistent with the DOM style JavaScript property, is more efficient, an
 
 # Why should component names start with capital letter ?
  developers can easily differentiate between HTML elements and React components.
+---------------------------------------------------------------------------------------------------------------------------
+::: Redux :::
+
+# is redux and redux toolkit are different
+
+Yes, Redux and Redux Toolkit are related but different:
+Redux ::
+ Redux is a state management library for JavaScript applications, particularly useful in React.
+It provides a predictable state container for managing and updating the application state in a consistent way.
+Redux requires developers to write a lot of boilerplate code, including actions, reducers, and store setup.
+
+Redux Toolkit ::
+ Redux Toolkit is the official, recommended way to write Redux logic, simplifying the process of working with Redux.
+It provides utility functions that help reduce the boilerplate code, such as createSlice, configureStore, and createAsyncThunk.
+It encourages best practices and is designed to make Redux development faster and easier.
+In short, Redux Toolkit is built on top of Redux and makes it easier and more efficient to work with Redux. 
+It simplifies Redux patterns and reduces the complexity that comes with setting up and using Redux in an application.
 
 
+:: Redux --> Steps
+   1. Configure / create Store
+   2. Provide the Redux Store to app.js
+   3. Create a Redux State Slice -->  import the createSlice API from Redux Toolkit.
+Creating a slice requires a string name to identify the slice, an initial state value, and one or more reducer functions to define how the state can be updated.
+   4. Add Slice Reducers to the Store
+   5. Use Redux State and Actions in React Components
 
+Summary ::
+  Create a Redux store with configureStore
+	configureStore accepts a reducer function as a named argument
+	configureStore automatically sets up the store with good default settings
+  Provide the Redux store to the React application components
+	Put a React-Redux <Provider> component around your <App />
+	Pass the Redux store as <Provider store={store}>
+  Create a Redux "slice" reducer with createSlice
+	Call createSlice with a string name, an initial state, and named reducer functions
+	Reducer functions may "mutate" the state using Immer
+	Export the generated slice reducer and action creators
+  Use the React-Redux useSelector/useDispatch hooks in React components
+	Read data from the store with the useSelector hook
+	Get the dispatch function with the useDispatch hook, and dispatch actions as needed
 
+---------------------------------------------------------------------------------------------------------------------------
 Note : HTML, form data usually handled by the DOM.
        React, Form data usually handled by the Component.
 
@@ -387,3 +427,7 @@ Note : Why Use [name] in the [ ] during Form Handling?
 
    Uncontrolled Components
 	Use ref to directly access DOM elements for form data.
+
+
+
+
