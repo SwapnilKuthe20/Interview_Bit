@@ -447,6 +447,9 @@ Note : Why Use [name] in the [ ] during Form Handling?
    Uncontrolled Components
 	Use ref to directly access DOM elements for form data.
 
-
+   When to Use useNavigate?
+	Redirect the user after a form submission.
+	Navigate based on some logic (e.g., if a user is logged in, go to the dashboard).
+	Replace navigation without reloading the page.
 
 
