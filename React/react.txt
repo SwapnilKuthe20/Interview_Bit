@@ -452,4 +452,7 @@ Note : Why Use [name] in the [ ] during Form Handling?
 	Navigate based on some logic (e.g., if a user is logged in, go to the dashboard).
 	Replace navigation without reloading the page.
 
-
+     :: Protected routes ::
+	return <Navigate to="/login" replace />;
+	If the user does not have a token, they are redirected to the /login page.
+	The replace prop ensures that the navigation history is replaced. This prevents the user from pressing the back button to try to return to the protected page.
