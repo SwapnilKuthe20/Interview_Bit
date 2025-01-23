@@ -1,0 +1,106 @@
+
+# What is the purpose of the <head> section in an HTML document, and what kind of elements are typically included within it?
+--> The <head> section in an HTML document contains meta-information about the document that is not displayed directly on the web page. It provides essential details and resources that help browsers, search engines, and other tools process the content of the page efficiently.
+
+ elements are included within the <head> section are ::
+<meta>: Provides metadata such as character encoding, author, keywords, and description for search engines.
+
+Example: <meta charset="UTF-8">
+<title>: Specifies the title of the webpage, which appears in the browser's title bar or tab.
+
+Example: <title>My Web Page</title>
+<link>: Links external resources like stylesheets or icons.
+
+Example: <link rel="stylesheet" href="styles.css">
+<style>: Contains internal CSS to style the document.
+
+Example: <style> body { color: blue; } </style>
+<script>: Contains or links to JavaScript that may control the page's behavior.
+
+Example: <script src="script.js"></script>
+<base>: Specifies a base URL for relative URLs in the document.
+
+Example: <base href="https://www.example.com/">
+<noscript>: Provides fallback content for browsers that do not support or have JavaScript disabled.
+
+# What is the purpose of the <noscript> tag in HTML, and when would you use it?
+--> The <noscript> tag in HTML is used to provide fallback content for users who have JavaScript disabled in their browsers or for browsers that do not support JavaScript. The content inside the <noscript> tag is only displayed when JavaScript is not available or is turned off.
+
+# What is the purpose of the <meta> tag with the viewport attribute, and why is it important in modern web development?
+--> The <meta> tag with the viewport attribute is used to control the layout and scaling of a webpage on different screen sizes and devices, especially on mobile devices. Its purpose is to ensure that the web page is properly scaled and displayed according to the size of the screen, improving the user experience.
+
+# Can you explain the difference between id and class attributes in HTML, and provide an example of when you would use each?
+--> The id and class attributes in HTML are used for selecting and styling elements, but they have different purposes:
+
+id is used to uniquely identify a single element on a webpage. It must be unique within the document. 
+Use it when you want to target one specific element, like for JavaScript manipulation or specific styling.
+
+class is used to group multiple elements that share the same styles or behaviors. It can be applied to multiple elements on the page.
+
+# Can you explain the difference between the <div> and <section> tags in HTML, and when would you use each?
+--> The <div> tag is a block-level element that serves as a container for grouping content together. 
+<div> does not have any semantic meaning, so it doesn't directly improve SEO or accessibility.
+
+Use Case: You would use the <div> tag when you need to group elements together for styling or layout purposes without implying any specific meaning about the content. It's a generic container used mostly for CSS styling, JavaScript manipulation, or structuring the page layout.
+
+The <section> tag is a semantic HTML5 element used to group related content together, usually with its own heading. 
+It's meant for sections of a page that form a distinct part of the content, like a chapter or topic.
+ <section> provides better accessibility and SEO benefits because it is meaningful and structured, making it easier for Developrs to read and
+ search engines to understand the document's layout.
+
+# Can you explain what the <meta> tag is used for in HTML? Provide examples of common types of <meta> tags and their purposes.
+--> The <meta> tag in HTML provides metadata about the web page. Metadata is information about the document that does not appear directly
+ on the page but is used by browsers, search engines, and other web services. The <meta> tag is always placed within the <head> section of the HTML document.
+
+# What are the differences between the <ol> and <ul> tags in HTML, and when would you use each?
+--> The <ol> tag is used to create an ordered list, meaning the list items are displayed in a numbered sequence.
+    It is typically used when the order/sequence of the list matters, like instructions, steps in a process, rankings.
+	
+    The <ul> tag is used to create an unordered list, where the list items are displayed with bullet points by default.
+    It is used when the order/sequence of the list does not matter, such as shopping lists, features of a product.
+
+# What is the purpose of the form element in HTML, and what are some commonly used attributes of the <form> tag?
+--> The <form> element in HTML is used to collect user input and send it to a server for processing.
+ It is a container for different types of input elements, such as text fields, radio buttons, checkboxes, and submit buttons,
+ which allow users to enter and submit data.
+ some commonly used attributes of the <form> tag are action, method, target. 
+
+# What does async and defer refer in script tag? Describe the difference between <script>, <script async> and <script defer>
+Async: Downloads the script file during HTML parsing and will pause the HTML parser to execute it when it has finished downloading.
+
+Defer: Defer downloads the script file during HTML parsing and will only execute it after the HTML parser has completed. Not all browsers support this.
+
+The async attribute is used to indicate to the browser that the script file can be executed asynchronously. The HTML parser does not need to pause at the point it reaches the script tag to fetch and execute, the execution can happen whenever the script becomes ready after being fetched in parallel with the document parsing.
+
+The defer attribute tells the browser to only execute the script file once the HTML document has been fully parsed.
+
+# What does CORS stand for and what issue does it address?
+--> CORS stands for Cross-Origin Resource Sharing.
+
+It’s a security rule that helps prevent harmful websites from making requests to other websites without permission.
+
+The problem it solves:
+Imagine you're on a website (e.g., example.com) and it wants to get data from another website (e.g., api.example2.com). Normally, browsers block this kind of request because it might be dangerous. This is called the same-origin policy.
+
+CORS is a way for the second website (api.example2.com) to say, "Hey, it's okay for example.com to ask for data from me." The server on api.example2.com sends a special message (called a CORS header) allowing requests from example.com to go through safely.
+
+So, CORS helps websites communicate with each other in a controlled way. Without it, certain requests would be blocked, making it harder for websites to get data from other sources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
