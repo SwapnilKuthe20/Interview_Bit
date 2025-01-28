@@ -1,92 +1,341 @@
 
-# What is the purpose of the <head> section in an HTML document, and what kind of elements are typically included within it?
---> The <head> section in an HTML document contains meta-information about the document that is not displayed directly on the web page. It provides essential details and resources that help browsers, search engines, and other tools process the content of the page efficiently.
+#	What is HTML and why is it important?
+Answer: HTML (HyperText Markup Language) is the standard language used to used to create web pages. 
+	It defines the layout and structure of web pages using various tags, such as headings, paragraphs, links, and images. 
+	HTML provides the basic skeleton of a webpage, while CSS is used for styling and JavaScript adds interactivity. 
+	It is essential because it enables browsers to render content in a meaningful way for users. 
 
- elements are included within the <head> section are ::
-<meta>: Provides metadata such as character encoding, author, keywords, and description for search engines.
+#	What are some advantages of HTML5 over its previous versions ?
+Answer: HTML5 improves web development by offering new elements like <video> and <audio>, better form inputs, and enhanced multimedia support. 
+	It also provides local storage and canvas for dynamic graphics, making websites more interactive and efficient.
 
-Example: <meta charset="UTF-8">
-<title>: Specifies the title of the webpage, which appears in the browser's title bar or tab.
+#	What are the 3 required parts of HTML? 
+Answer: The three required parts of HTML are:
 
-Example: <title>My Web Page</title>
-<link>: Links external resources like stylesheets or icons.
+	1) DOCTYPE declaration: It defines the version of HTML being used and ensures proper rendering in different browsers.
+	2) <html> element: This element wraps all the content on the webpage and signifies the beginning of an HTML document.
+	3) <body> element: It contains the visible content of the webpage, such as text, images, links, and other elements displayed in the browser window.
 
-Example: <link rel="stylesheet" href="styles.css">
-<style>: Contains internal CSS to style the document.
+#	If I do not put <!DOCTYPE html> will HTML 5 work?
+Answer: No, the browser will not be able to identify that it is an HTML document and HTML 5 tags do not function properly..
 
-Example: <style> body { color: blue; } </style>
-<script>: Contains or links to JavaScript that may control the page's behavior.
+#	What is the purpose of the <head> section in an HTML document, and what kind of elements are typically included within it?
+Answer: The <head> section in an HTML document contains meta-data about the document and links that does not directly render content on the web page.
+	It provides essential details and resources that help browsers, search engines, and other tools to process the content of the page efficiently.
 
-Example: <script src="script.js"></script>
-<base>: Specifies a base URL for relative URLs in the document.
+	 elements are included within the <head> section are ::
+	<meta>: Provides metadata such as character encoding, author, keywords, and description for search engines.
 
-Example: <base href="https://www.example.com/">
-<noscript>: Provides fallback content for browsers that do not support or have JavaScript disabled.
+	Example: <meta charset="UTF-8">
+	<title>: Specifies the title of the webpage, which appears in the browser's title bar or tab.
 
-# What is the purpose of the <noscript> tag in HTML, and when would you use it?
---> The <noscript> tag in HTML is used to provide fallback content for users who have JavaScript disabled in their browsers or for browsers that do not support JavaScript. The content inside the <noscript> tag is only displayed when JavaScript is not available or is turned off.
+	Example: <title>My Web Page</title>
+	<link>: Links external resources like stylesheets or icons.
 
-# What is the purpose of the <meta> tag with the viewport attribute, and why is it important in modern web development?
---> The <meta> tag with the viewport attribute is used to control the layout and scaling of a webpage on different screen sizes and devices, especially on mobile devices. Its purpose is to ensure that the web page is properly scaled and displayed according to the size of the screen, improving the user experience.
+	Example: <link rel="stylesheet" href="styles.css">
+	<style>: Contains internal CSS to style the document.
 
-# Can you explain the difference between id and class attributes in HTML, and provide an example of when you would use each?
---> The id and class attributes in HTML are used for selecting and styling elements, but they have different purposes:
+	Example: <style> body { color: blue; } </style>
+	<script>: Contains or links to JavaScript that may control the page's behavior.
 
-id is used to uniquely identify a single element on a webpage. It must be unique within the document. 
-Use it when you want to target one specific element, like for JavaScript manipulation or specific styling.
+	Example: <script src="script.js"></script>
+	<base>: Specifies a base URL for relative URLs in the document.
 
-class is used to group multiple elements that share the same styles or behaviors. It can be applied to multiple elements on the page.
-
-# Can you explain the difference between the <div> and <section> tags in HTML, and when would you use each?
---> The <div> tag is a block-level element that serves as a container for grouping content together. 
-<div> does not have any semantic meaning, so it doesn't directly improve SEO or accessibility.
-
-Use Case: You would use the <div> tag when you need to group elements together for styling or layout purposes without implying any specific meaning about the content. It's a generic container used mostly for CSS styling, JavaScript manipulation, or structuring the page layout.
-
-The <section> tag is a semantic HTML5 element used to group related content together, usually with its own heading. 
-It's meant for sections of a page that form a distinct part of the content, like a chapter or topic.
- <section> provides better accessibility and SEO benefits because it is meaningful and structured, making it easier for Developrs to read and
- search engines to understand the document's layout.
-
-# Can you explain what the <meta> tag is used for in HTML? Provide examples of common types of <meta> tags and their purposes.
---> The <meta> tag in HTML provides metadata about the web page. Metadata is information about the document that does not appear directly
- on the page but is used by browsers, search engines, and other web services. The <meta> tag is always placed within the <head> section of the HTML document.
-
-# What are the differences between the <ol> and <ul> tags in HTML, and when would you use each?
---> The <ol> tag is used to create an ordered list, meaning the list items are displayed in a numbered sequence.
-    It is typically used when the order/sequence of the list matters, like instructions, steps in a process, rankings.
+	Example: <base href="https://www.example.com/">
+	<noscript>: Provides fallback content for browsers that do not support or have JavaScript disabled.
 	
-    The <ul> tag is used to create an unordered list, where the list items are displayed with bullet points by default.
-    It is used when the order/sequence of the list does not matter, such as shopping lists, features of a product.
+#	 What are meta tags in HTML?
+Answer : Meta tags in HTML are elements that provide metadata about a webpage, such as its description, keywords, author, and viewport settings.
+	 They are placed within the <head> section of an HTML document and are used by search engines and browsers to understand and process the page content.
 
-# What is the purpose of the form element in HTML, and what are some commonly used attributes of the <form> tag?
---> The <form> element in HTML is used to collect user input and send it to a server for processing.
- It is a container for different types of input elements, such as text fields, radio buttons, checkboxes, and submit buttons,
- which allow users to enter and submit data.
- some commonly used attributes of the <form> tag are action, method, target. 
+#	What is the purpose of the <meta> tag with the viewport attribute, and why is it important in modern web development?
+Answer: The <meta> tag with the viewport attribute is used to control the layout and scaling of a webpage on different screen sizes and devices, 
+	especially on mobile devices. Its purpose is to ensure that the web page is properly scaled and displayed according to the size of the screen, 
+	improving the user experience.
 
-# What does async and defer refer in script tag? Describe the difference between <script>, <script async> and <script defer>
-Async: Downloads the script file during HTML parsing and will pause the HTML parser to execute it when it has finished downloading.
+#	What is the purpose of the <noscript> tag in HTML, and when would you use it?
+Answer: The <noscript> tag in HTML is used to provide fallback content for users who have JavaScript disabled in their browsers or for browsers that 
+	do not support 	JavaScript. The content inside the <noscript> tag is only displayed when JavaScript is not available or is turned off.
 
-Defer: Defer downloads the script file during HTML parsing and will only execute it after the HTML parser has completed. Not all browsers support this.
+#	What are semantic HTML elements and why are they important?
+Answer: Semantic HTML elements are elements which clearly describes its meaning to both the browser and the developer.
+	Unlike non-semantic elements like <div> and <span> that tells nothing about its content.
+	Semantic elements explicitly define their purpose. 
+	Semantic Elements in HTML are ::
+	<header> : Defines the top section of a webpage, usually containing a logo, title, or navigation links.
+	<footer> : Represents the bottom section of a webpage, often including copyright, links, or contact info.
+	<nav>    : Used for navigation links to other parts of the site or external pages.
+	<article>: Represents a standalone piece of content, like a blog post or news story.
+	<aside>  : Contains related or supplementary content, like a sidebar or ads.
+	<main>   : Represents the main content of the webpage, focusing on the core purpose of the page.
+	<section>: Divides content into thematic or logical groups for better organization.
+	<summary>: Works with <details> to provide a clickable summary or title for collapsible content.
+	
+#	What is the role of the alt attribute in the <img> tag ?
+Answer: The alt attribute in the <img> tag provides alternative text for an image. 
+	It serves three key purposes ::
+	1. It act as fallback text if the image cannot be loaded, 
+	2. It enhance accessibility by being read aloud by screen readers for visually impaired users.
+	3. improve SEO by helping search engines understand the image's content.
 
-The async attribute is used to indicate to the browser that the script file can be executed asynchronously. The HTML parser does not need to pause at the point it reaches the script tag to fetch and execute, the execution can happen whenever the script becomes ready after being fetched in parallel with the document parsing.
+#	What is the role of the alt attribute in HTML?
+Answer: The alt attribute provides alternative text for an image in case the image cannot be displayed. 
+	This is important for accessibility, as screen readers can read the alt text to describe the image to visually impaired users.
 
-The defer attribute tells the browser to only execute the script file once the HTML document has been fully parsed.
+#	What is the use of the target attribute in the <a> tag ?	
+Answer: The target attribute in the <a> (anchor) tag specifies where the linked document will open when the link is clicked. 
+	By default, links open in the same window or tab. However, the target attribute can be used to control this behavior.
 
-# What does CORS stand for and what issue does it address?
---> CORS stands for Cross-Origin Resource Sharing.
+	Here are some common values for the target attribute :
 
-It’s a security rule that helps prevent harmful websites from making requests to other websites without permission.
+	_self: Opens the link in the same frame as it was clicked (default behavior).
+	_blank: Opens the link in a new window or tab.
+	_parent: Opens the link in the parent frame.
+	_top: Opens the link in the full body of the window, clearing all frames.
 
-The problem it solves:
-Imagine you're on a website (e.g., example.com) and it wants to get data from another website (e.g., api.example2.com). Normally, browsers block this kind of request because it might be dangerous. This is called the same-origin policy.
+#	Describe the difference between block-level and inline elements.
+Answer: Block-Level Elements :
+	Block-level elements take up the entire width of their parent container by default, regardless of their content width.
+	They always start on a new line and push subsequent elements to the next line. 
+	Examples are <div>, <p>, <h1> to <h6>, <ul>, <ol>, <section>, <article>.
+	
+	Inline  Elements : 
+	Inline elements only take up as much width as their content requires.
+	They do not start on a new line; instead, they flow along with the surrounding content.
+	Examples are <span>, <a>, <img>, <strong>, <em>.
+	
+	Additional Note:
+	Certain elements can behave differently when their display property is altered using CSS 
+	(e.g., changing a block-level element to display: inline or vice versa)
 
-CORS is a way for the second website (api.example2.com) to say, "Hey, it's okay for example.com to ask for data from me." The server on api.example2.com sends a special message (called a CORS header) allowing requests from example.com to go through safely.
+#	Difference between HTML and XHTML ?
+Answer: HTML stands for Hypertext Markup Language.
+	Doctype is not necessary to write at the top..
+	Tags do not always need to be closed, and case-sensitivity is not must.
 
-So, CORS helps websites communicate with each other in a controlled way. Without it, certain requests would be blocked, making it harder for websites to get data from other sources.
+	XHTML stands for Extensible Hypertext Markup Language.
+	Doctype is very necessary to write at the top of the file.
+	Tags always need to be closed also must be written in lowercase.		
+
+#	How many types of heading does an HTML contain?
+Answer: The HTML contains six types of headings which are defined with the <h1> to <h6> tags. 
+	Each type of heading tag displays different text size from another. So, <h1> is the largest heading tag and <h6> is the smallest one.
+
+#	Do all HTML tags have an end tag?
+Answer: No. There are some HTML tags that don't need a closing tag. For example: <image> tag, <br> tag.
+
+#	What is the difference between HTML elements and tags?
+Answer: HTML Tags: 
+	Tags are the basic building blocks used to define elements in an HTML document. 
+	They are enclosed in angle brackets, like <tagname>. Tags come in pairs: an opening tag <tagname> and a closing tag </tagname>. 
+	The closing tag has a forward slash (/) before the tag name.
+
+	HTML Elements: 
+	An HTML element consists of the tag itself, the content between the opening and closing tags, and any attributes. 
+	Essentially, an element is everything that makes up the tag plus its content.
+
+  For eg : <h1>Welcome to My Website</h1>
+      Here, <h1> is the tag, and <h1>Welcome to My Website</h1> is the element, which includes the tag, the content "Welcome to My Website", and the closing tag.
+
+#	What are HTML Attributes ?
+Answer: HTML attributes provide additional information about an element and define its properties or behavior. 
+	They are added inside the opening tag and never in closing tags. 
+	For example, the <img> tag uses the src attribute to specify the image source.
+	Some attributes, like id and class, are global and can be used with any tag. 
+	Others, like data-*, allow us to include custom data for scripting."
+
+#	What is the purpose of the data-* attribute in HTML? Provide an example use case.
+Answer: The data-* attribute in HTML is used to store custom data on HTML elements. 
+	It allows developers to embed extra information in elements that can be accessed and manipulated via JavaScript, 
+	without affecting the rendering or behavior of the page. The attribute is designed to store non-visible data 
+	that is associated with an element but doesn't have a specific meaning in HTML itself.
+
+Purpose:
+	Custom data storage: Store additional information that can be accessed programmatically.
+	Separation of data from structure: It allows data to be kept with the relevant element, without affecting the element's appearance or functionality.
+Syntax:
+	<data-attribute="value">
+Example Use Case:
+	Suppose you're building a product catalog, and you want to store the product's price and ID in each item, without displaying them in the HTML.
+
+#	What are the global attributes in HTML? Provide examples.
+Answer: Global attributes in HTML are attributes that can be applied to almost any HTML element. 
+	These attributes provide additional functionality, such as accessibility, styling, or event handling.
+	Global attributes are : id, class, style, title, data-*, etc...
+
+#	How are data attributes useful in modern web development ?
+Answer: Data attributes are incredibly useful in modern web development for embedding custom data into HTML elements
+	without interfering with the standard HTML structure. These attributes are prefixed with data- and allow developers 
+	to store custom data directly in the DOM.
+
+#	Can you explain the difference between id and class attributes in HTML, and provide an example of when you would use each?
+Answer: The id and class attributes in HTML are used for selecting and styling elements, but they have different purposes:
+
+	id is used to uniquely identify a single element on a webpage. It must be unique within the document. 
+	Use it when you want to target one specific element, like for JavaScript manipulation or specific styling.
+
+	class is used to group multiple elements that share the same styles or behaviors. It can be applied to multiple elements on the page.
+
+#	What is a marquee in HTML ?
+Answer: Marquee is used to display scrolling text or images on a web page. 
+	It automatically scrolls the content in a specified direction, such as up, down, left, or right. 
+	To use it, enclose the text or image you want to scroll within the <marquee>...</marquee> tags.
+
+#	 How many tags can be used to separate a section of texts?
+Answer: Three tags are used to separate the texts ::
+
+	<br> tag - Usually <br> tag is used to separate the line of text. It breaks the current line and conveys the flow to the next line
+	<p> tag - The <p> tag contains the text in the form of a new paragraph.
+	<blockquote> tag - It is used to define a large quoted section. If you have a large quotation, then put the entire text within 							   <blockquote>.............</blockquote> tag.
 
 
+#	What are the differences between the <ol> and <ul> tags in HTML, and when would you use each?
+Answer:	Ordered list - The ordered list displays elements in numbered format. It is represented by <ol> tag.
+	It is used when the order/sequence of the list matters, like instructions, steps in a process, rankings.
+
+	Unordered list - The unordered list displays elements in bulleted format. It is represented by <ul> tag.
+	It is used when the order/sequence of the list does not matter, such as shopping lists, features of a product.
+
+	Definition list - The definition list displays elements in definition form like in dictionary. 
+			  The <dl>, <dt> and <dd> tags are used to define description list.
+
+ 
+#	Can you explain the difference between the <div> and <section> tags in HTML, and when would you use each?
+Answer: The <div> tag is a generic container with no semantic meaning, used mainly for styling or layout purposes. 
+	so it doesn't directly improve SEO or accessibility.
+
+	The <section> tag is semantic and is used to group related content, usually with its own heading, to improve structure, accessibility, and SEO.
+
+	Use Case: 
+	You would use the <div> tag when you need to group elements together for styling or layout purposes 
+	without implying any specific meaning about the content. 
+	It's a generic container used mostly for CSS styling, JavaScript manipulation, or structuring the page layout.
+
+	<section> provides better accessibility and SEO benefits because it is meaningful and structured, making it easier for Developrs to read and
+	search engines to understand the document's layout.
+
+# 	Are <b> and <strong> tags same? 
+Answer: No, the <b> and <strong> tags are not the same, even though they may appear visually similar in many cases. Here's the difference:
+
+	<b> (Bold): The <b> tag is used to display text in bold for styling purposes only. 
+		    It doesn't carry any semantic meaning and is primarily a visual presentation element.
+
+	<strong> (Strong): The <strong> tag also makes text bold but conveys semantic importance. It tells search engines and screen readers
+			   that the text enclosed within it is of strong importance or emphasis.
+
+# 	What is the purpose of the form element in HTML, and what are some commonly used attributes of the <form> tag?
+Answer: The <form> element in HTML is used to collect user input and send it to a server for processing.
+ 	It is a container for different types of input elements, such as text fields, radio buttons, checkboxes, and submit buttons,
+	which allow users to enter and submit data.
+ 	some commonly used attributes of the <form> tag are action, method, target. 
+
+#	What is the role of the title attribute in HTML?
+Answer: The title attribute provides additional information about an element, such as a link or an image. 
+	The title text is displayed as a tooltip when a user hovers over the element.
+
+#	What is the role of the action attribute in HTML forms?
+Answer: The action attribute is used to specify the URL of the script or program that will process the data submitted by the form. 
+	When the user clicks the submit button, the form data is sent to the specified URL for processing.
+
+#	What is the role of the method attribute in HTML forms?
+Answer: The method attribute specifies the HTTP method for submitting the form data. The two most common methods are GET and POST.
+	GET retrieves data from the server, while POST sends data to the server.
+
+#	In how many ways can you display HTML elements?
+Answer: HTML elements can be displayed in several ways, including block, inline, inline-block, and none. 
+	The display property can specify how an element should be displayed.
+
+#	In how many ways can we specify the CSS styles for the HTML element?
+Answer: CSS styles can be specified in several ways, including inline, internal, and external stylesheets. 
+	Inline styles are applied directly to the HTML element using the style attribute. 
+	Internal styles are defined within the <head> section of the HTML document using the <style> tag. 
+	External stylesheets are defined in a separate CSS file and linked to the HTML document using the <link> tag.
+
+#	What is the difference between link tag <link> and anchor tag <a>?
+Answer: The <link> tag links external resources, such as CSS stylesheets, to an HTML document. 
+	The <a> tag creates links to other pages or resources within the same document.
+
+#	What is the use of a span tag? Give one example.
+Answer: The span tag is used for following things:
+
+	For adding color on text
+	For adding background on text
+	Highlight any color text
+
+#	What is the use of an iframe tag?
+Answer: The <iframe> tag in HTML is used to embed another HTML document within the current document. 
+	It's commonly used to display content from other websites or external resources, such as videos, maps, ads, or even whole pages, within your page.
+
+#	What is the use of the required attribute in HTML5 ?
+Answer: It forces a user to fill text on the text field or text area before submitting the form. It is used for form validation.
+	Name: <input type="text" name="name" required>
+
+#	What is the difference between the <link> and the <a> tag ?
+Answer: The <link> tag is used to define a link between the given URL and the HTML document, whereas the <a> tag is used to add a hyperlink to the webpage.
+
+#	Does a hyperlink only apply to text ?
+Answer: No, you can use hyperlinks on both text and images. The HTML anchor tag <a> defines a hyperlink that connects one page. 
+	The "href" attribute is the most crucial attribute of the HTML anchor tag.
+
+#	How do you create a dropdown list in HTML ?
+Answer: To create a dropdown list in HTML, use the <select> element along with <option> elements to define the list items.
+
+#	What is the hierarchy that is followed in stylesheets?
+Answer: Inline styles (styles applied directly to an HTML element) take the highest priority.
+	Embedded styles (styles written within a <style> tag in the HTML document) come next.
+	External stylesheets (styles linked from separate CSS files) have the lowest priority.
+	So, if there are conflicting styles, the one with the closest specificity to the actual element will be applied.
+
+#	When to use scripts in the head and when to use scripts in the body?
+Answer: Scripts can be placed in the <head> section of the HTML document or in the <body> section. 
+	Scripts that must be executed before the page is displayed, such as scripts that define variables or functions, 
+	should be placed in the <head> section. Scripts that must be executed after the page is displayed, 
+	such as scripts that manipulate the DOM, should be placed in the <body> section.
+
+# 	What does async and defer refer in script tag? Describe the difference between <script>, <script async> and <script defer>
+Answer: Async: Downloads the script file during HTML parsing and will pause the HTML parser to execute it when it has finished downloading.
+
+	Defer: Defer downloads the script file during HTML parsing and will only execute it after the HTML parser has completed. Not all browsers support this.
+
+	The async attribute is used to indicate to the browser that the script file can be executed asynchronously. 
+	The HTML parser does not need to pause at the point it reaches the script tag to fetch and execute, 
+	the execution can happen whenever the script becomes ready after being fetched in parallel with the document parsing.
+
+	The defer attribute tells the browser to only execute the script file once the HTML document has been fully parsed.
+
+#	How to handle events in HTML ?
+Answer: Events can be handled using JavaScript, which can be included in the HTML document using the <script> tag. 
+	Event listeners can be added to HTML elements using the addEventListener() method, which allows custom code to be executed 
+	in response to user actions, such as clicks or keystrokes.
+
+# 	Explain the concept of web storage in HTML5.
+Answer: HTML5 supports two different forms of data storage: session storage and local storage. 
+	SessionStorage stores data only for the current session. The data is deleted when the tab or window is closed; 
+	local storage stores data with no expiration date and persists until deleted. Thus, LocalStorage stores data with no expiration time, 
+	while SessionStorage only retains data for the duration of the page session.
+
+#	What does CORS stand for and what issue does it address ?
+Answer: CORS stands for Cross-Origin Resource Sharing.
+
+	It’s a security rule that helps prevent harmful websites from making requests to other websites without permission.
+
+	The problem it solves:
+	Imagine you're on a website (e.g., example.com) and it wants to get data from another website (e.g., api.example2.com). 
+	Normally, browsers block this kind of request because it might be dangerous. This is called the same-origin policy.
+
+ 	CORS is a way for the second website (api.example2.com) to say, "Hey, it's okay for example.com to ask for data from me.
+	" The server on api.example2.com sends a special message (called a CORS header) allowing requests from example.com to go through safely.
+
+	So, CORS helps websites communicate with each other in a controlled way. Without it, certain requests would be blocked, 
+	making it harder for websites to get data from other sources.
+
+#	What are Web Workers?
+Answer: Web Workers provide a simple way for web content to run scripts on background threads. 
+	The worker thread can complete tasks without affecting the user interface. 
+	They can also use the XMLHttpRequest and fetch() APIs for network requests. 
+
+	After it is created, a worker can post messages to an event handler provided by the JavaScript code to convey messages to that code. 
+	Web Workers enable long-running tasks to be executed without interrupting user interactions, keeping the UI responsive.
 
 
 

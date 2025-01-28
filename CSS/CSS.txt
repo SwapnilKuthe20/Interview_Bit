@@ -1,0 +1,204 @@
+::: CSS :::
+
+#	What is CSS ?
+Answer: CSS stands for Cascading Style Sheet. It is used to control the presentation of web pages written in HTML or XML.
+	It allows developers to style elements and control layout of a webpage. 
+	CSS can be applied inline, internally within the HTML document, or externally through linked CSS files.
+
+#	What is the current version of CSS ?
+Answer: CSS3 is the latest version of CSS.
+
+#	Why Use CSS?
+Answer: CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+
+#	What is the syntax for CSS ?
+Answer: A CSS style rule consists of a selector, property, and its value. 
+	The selector points to the HTML element where CSS style is to be applied. The CSS property is separated by semicolons.
+
+#	In how many ways can we add CSS to our HTML file ?	
+Answer: 1. Inline CSS :
+		CSS styles are added directly to individual HTML elements using the style attribute.
+		Best for quick styling or testing but not recommended for larger projects.
+	2. Internal CSS :
+		CSS is added within a <style> tag inside the <head> section of the HTML document. 
+		Suitable for single-page projects but can become unmanageable as the project grows.
+	3. External CSS :
+		CSS is written in a separate file and linked to the HTML document using the <link> tag in the <head> section.
+		Best for multi-page projects because it allows you to reuse the same styles across multiple pages. 
+		This keeps your code organized and makes it easier to manage.
+
+#	What are CSS Selectors?
+Answer: CSS selectors are used to select the HTML elements you want to style.
+
+	We can divide CSS selectors into five categories:
+
+	Simple selectors (select elements based on name, id, class)
+	Combinator selectors (select elements based on a specific relationship between them)
+	Pseudo-class selectors (select elements based on a certain state)
+	Pseudo-elements selectors (select and style a part of an element)
+	Attribute selectors (select elements based on an attribute or attribute value)
+
+	--------------------------
+	CSS Selectors are used to selecting HTML elements based on their element name, id, attributes, etc. 
+	It can select one or more elements simultaneously.
+
+	element selector:
+		The element selector in CSS is used to select HTML elements which are required to be styled.
+	id selector: 
+		The #id selector is used to set the style of the given id. 
+		The id attribute is the unique identifier in an HTML document. The id selector is used with a # character.
+	class selector: 
+		The .class selector is used to select all elements which belong to a particular class attribute. 
+		To select the elements with a particular class, use the (.) character with specifying the class name.
+
+#	Universal Selector
+Answer: The universal selector (*) selects all HTML elements on the page.
+
+#	What does the ‘a’ in rgba mean?
+Answer: RGBA contains A (Alpha) which specifies the transparency of elements. The value of alpha lies between 0.0 to 1.0
+
+#	What is the difference between margin and padding?
+Answer: Margin is used to create space around elements and padding is used to create space around elements inside the border.
+
+#	What is CSS Box Model?
+Answer: The CSS box model is a container that defines how elements are rendered on a web page.
+	The web browser renders every element as a rectangular box consisting of four layers which are :
+
+	Content:  Actual Content of the box where the text or image or other content is placed..
+	Padding: The space between the content and the element's border. It increases the spacing inside the box.
+	Border: It is the area between the box’s padding and margin. It can be styled with different colors, widths, and styles.
+	Margin: The outermost space that separates the element from other elements on the page.
+
+#	What is the difference between CSS border and outline ?	
+Answer:	The CSS border property is used to define the style, color, and width of the border surrounding an element. 
+	It is part of the element’s box model and takes up space, affecting the layout of surrounding elements.
+
+	On the other hand, the CSS outline property also draws a line around the element, OUTSIDE the borders.
+	but it doesn't take up space in the layout and does not affect the element’s size or the positioning of other elements.
+	
+#	What is the difference between display: none and visibility: hidden ?
+Answer: display: none:
+	When an element is styled with display: none, it is completely removed from the document flow, 
+	meaning it does not take up any space on the page. The element 	is effectively not rendered, 
+	and the layout of the surrounding elements will adjust accordingly.
+	This property is often used when you want to hide an element entirely, including its space on the page.
+	
+	visibility: hidden:
+	The element with visibility: hidden is still present in the document flow, but it is made invisible. 
+	It takes up space, but its content is not visible to the user. The layout of the surrounding elements does not change, 
+	as the element's space remains occupied.
+	This property is useful when you want the element to remain in place but not be visible.
+
+#	What is RWD?
+Answer: RWD stands for Responsive Web Design. 
+	This technique is used to display the designed page perfectly on every screen size and device, 
+	for example, mobile, tablet, desktop and laptop. You don't need to create a different page for each device.
+
+#	What is the float property of CSS ?
+Answer: The float property in CSS is used to place an element to the left or right within its container, allowing other content to wrap around it.
+	It was originally used for creating layouts before more modern techniques like Flexbox and Grid were introduced.
+
+#	What is CSS flexbox ?
+Answer: CSS Flexbox (Flexible Box Layout) is a layout model in CSS designed to distribute space along a single axis (either horizontally or vertically) 
+	and align items in a container. It helps to create responsive designs without using floats or positioning.
+
+#	What is CSS Grid ?
+Answer: CSS Grid is a powerful two-dimensional layout system in CSS that allows you to create complex and responsive web layouts with ease. 
+	It enables both rows and columns to be controlled simultaneously, providing precise control over the placement and alignment of elements within a container.
+	In a grid layout, you define a container as a grid using display: grid; and then place child elements into the grid with grid lines, columns, and rows.
+	CSS Grid is especially useful for building responsive designs as it allows you to easily adapt layouts across various screen sizes without 
+	the need for complex media queries
+	
+#	What are CSS Grid and how is it different from Flexbox?
+Answer: CSS Grid is a two-dimensional layout system that allows for the creation of complex web layouts using rows and columns. 
+	It provides control over both vertical and horizontal layouts, unlike Flexbox, which is primarily a one-dimensional layout system (row or column)
+
+#	What is the purpose of the z-index and how is it used ?
+Answer: The z-index in CSS is used to control the stacking order of elements on a webpage. 
+	It determines which elements appear in front or behind others when they overlap. 
+	The higher the z-index value, the closer the element is to the user, meaning it will appear on top of elements with lower z-index values.
+
+	The z-index only works on positioned elements, i.e., elements that have a position value of relative, absolute, fixed, or sticky.
+
+#	What is specificity in CSS ?
+Answer: When more than one set of CSS rules applies to the same element, the browser will have to decide which specific set 
+	will be applied to the element. The rules the browser follows are collectively called Specificity
+
+	Specificity Rules include ::
+
+	CSS style applied by referencing external stylesheet has the lowest precedence and is overridden by Internal and inline CSS.
+	Internal CSS is overridden by inline CSS.
+	Inline CSS has the highest priority and overrides all other selectors.
+	
+	Specificity Hierarchy: Every element selector has a position in the Hierarchy.
+
+	Inline style: Inline style has the highest priority.
+	Identifiers(ID): ID has the second-highest priority.
+	Classes, pseudo-classes, and attributes: Classes, pseudo-classes, and attributes have come next.
+	Elements and pseudo-elements: Elements and pseudo-elements have the lowest priority. 
+
+#	What are Pseudo classes?
+Answer: A pseudo-class is used to define a special state of an element without needing to add extra classes or IDs.
+
+	For example, it can be used to: 
+	 
+	1. Styling an element on mouseover (hover)
+	2. Styling an element when it gets focus
+	3. Styling visited/unvisited links
+
+	For example:
+	:link — Targets anchor (<a>) elements that have not yet been visited.
+	:visited — Selects anchor (<a>) elements that have been visited by the user.
+	:hover — Applies styles when the user hovers over an element, commonly used for buttons or links.
+	:active — Targets elements that are currently being activated (like a link being clicked).
+	:focus — Selects elements when they have focus, such as an input field when it is selected.
+
+#	CSS Pseudo-elements
+Answer: A CSS pseudo-element is used to style specific parts of an element.
+
+	For example, it can be used to:
+
+	Style the first letter or line, of an element
+	Insert content before or after an element
+	Style the markers of list items
+	Style the viewbox behind a dialog box
+
+#	What is the difference between em and rem units in CSS?
+Answer: px: An absolute unit; it remains the same size regardless of parent elements or user settings.
+	em: The em unit is relative to the font size of the parent element.
+	    For example, if the parent element's font size is 16px, 1em will equal 16px.
+  	rem: The rem unit is relative to the root element (<html>) font size. 
+	     If the root font size is 16px, 1rem equals 16px, regardless of the parent element’s font size.
+
+#	What is the difference between inline, inline-block, and block?
+Answer: 
+	Inline elements:
+	They do not start on a new line; they appear alongside other inline elements on the same line, as long as there’s space.
+	You can only control their content, such as text or images, but you can’t control their width or height.
+	Common examples include <a>, <span>, <strong>, <img>, <cite>, and <button>.
+
+	Inline-block elements:
+	These elements are a hybrid between inline and block elements. They behave like inline elements in that they appear on the same line as other inline elements, 	but unlike inline elements, you can apply padding, margin, and set explicit height and width for them.
+	This makes them useful when you need inline behavior but still want to control their dimensions.
+	Examples include custom elements like <button>, <input>, etc.
+	
+	Block elements:
+	Block-level elements always start on a new line and take up the full width of their parent container, pushing subsequent elements down to the next line.
+	You can control the width and height, and they will stretch to the full width available (unless otherwise specified).
+	Common examples are <div>, <p>, <header>, <footer>, and <section>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
