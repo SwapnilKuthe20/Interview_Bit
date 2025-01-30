@@ -1,0 +1,123 @@
+# Is JavaScript a compiled or interpreted language ?
+# Is there any relation between Java and JavaScript ?
+# What is ECMAScript ?
+# What is V8 JavaScript engine ?
+# Why do we call javascript as dynamic language ?
+# What is an event loop ?
+# What is call stack ?
+# What is an event queue ?
+# What is global execution context ?
+# What is function execution context ?
+# What are template literals ?
+# What are the differences between primitives and non-primitives ?
+# What is the Temporal Dead Zone ?
+# What is a rest parameter ?
+# What is a spread operator ?
+# What are the differences between spread operator and rest parameter ?
+# What are the types of loops in javascript ?
+# What are the differences between for...of and for...in statements ?
+# What is the difference between map and forEach functions ?
+# What are the possible ways to create objects in JavaScript ?
+# What is JSON and its common operations ?
+# What is Array and its method ?
+# What is the purpose of the array slice method ?
+# What is the purpose of the array splice method ?
+# What is the difference between slice and splice ?
+# What is the difference between substring and substr methods ? 
+# How do you combine two or more arrays ?
+# What is the difference between Shallow and Deep copy ?
+# What is arrow function ?
+# What is a higher order function ?
+# What is the currying function ?
+# What is a pure function ?
+# What is the Temporal Dead Zone ?
+# What is an IIFE (Immediately Invoked Function Expression) ?
+# What is memoization ?
+# What is Hoisting ?
+# What are closures ?
+# What is scope in javascript ?
+# What are the differences between cookie, local storage and session storage ?
+# What is a Cookie ?
+# Why do you need a Cookie ?
+# Why do you need web storage ?
+# What is a promise ?
+# Why do you need a promise ?
+# What are the three states of promise ?
+# What are the pros and cons of promises over callbacks ?
+# What is a callback function ?
+# Why do we need callbacks ?
+# What is a callback hell ?
+# What is promise chaining ?
+# What is a strict mode in javascript ?
+# Why do you need strict mode ?
+# How do you declare strict mode ?
+# What is typeof operator ?
+# What is eval ?
+# What is the difference between window and document ?
+# What is event bubbling ?
+# What is event capturing ?
+# How do you submit a form using JavaScript ?
+# What are events ?
+# What is the use of preventDefault method ?
+# What is the use of stopPropagation method ?
+# What is the use of setTimeout ?
+# What is the use of setInterval ?
+# Why is JavaScript treated as Single threaded ?
+# What is JSON ?
+# What are the syntax rules of JSON ?
+# What is the purpose JSON stringify ?
+# How do you parse JSON string ?
+# Why do you need JSON ?
+# What is the purpose of clearTimeout method ?
+# What is the purpose of clearInterval method ?
+# How do you get the current url with javascript ?
+# How do you make first letter of the string in an uppercase ?
+# How do you display the current date in javascript ?
+# What are break and continue statements ?
+# How do you change the style of a HTML element ?
+# What is the difference between proto and prototype ?
+# How can you get the list of keys of any object ?
+# What is an anonymous function ?
+# What are the advantages of Getters and Setters ?
+# What is the purpose of switch-case ?
+# What are primitive data types ?
+# What are the different methods to find HTML elements in DOM ?
+# What is debouncing ?
+# What is throttling ? 
+# What is optional chaining ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
