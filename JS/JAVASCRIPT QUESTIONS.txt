@@ -1,0 +1,361 @@
+
+	::	JAVASCRIPT QUESTIONS	::
+
+#	What is js ? And where it is commmonly used ?
+Answer: JavaScript (JS) is a high-level, interpreted programming language primarily used to create dynamic and interactive web applications. 
+	It is a single-threaded, dynamically typed, and event-driven language that runs in the browser as well as on the server using environments like Node.js. 
+	
+	Key Features:
+	Dynamically Typed:
+		In JavaScript, you don’t need to specify a variable's type (like number or string). 
+		JS is a dynamically typed language which means that data-type of variables are determined by the value they hold at a runtime.						Also, you can change the type later by assigning a different value.
+	
+	Interpreted Language: 
+		JavaScript is an interpreted language, meaning its code is executed line by line by the JavaScript engine. 
+		modern JavaScript engines like V8 (Chrome, Node.js) use Just-In-Time (JIT) compilation which compiled JS code into machine code at runtime, 
+		rather than being fully compiled before execution.
+	
+	Single-Threaded: 
+		because it executes one task at a time in a single execution thread. (using a call stack)
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What are the different data-types in JavaScript ? 
+Answer: Mainly there are two types of data-type Primitive and Non-Primitive Data-Type also known as Reference Type .
+	
+	Primitive data-types : 
+		Primitive data-type represent a single value. They are immutable which means their values cannot be changed once assigned
+		These types are directly stored in memory. 
+		Primitive data-types are : string, number, boolean, undefined, null, symbol, and bigint.
+	
+	Non-Primitive Data-Type :
+		Non-primitive data types are more complex and are used to store collections of values. 
+		They are mutable, meaning their values can be changed after creation. 
+		These data types do not store the actual value but instead store a reference to the memory location where the value is stored.
+		Non-Primitive data-types are : Array, Object, Function etc
+
+	The seven Primitive Data Types are:
+	1. Stings: Represents text enclosed in quotes.
+	2. Numbers: Represents numeric values.
+	3. Booleans:  Represents true or false.
+	4. Undefined: A variable declared but not assigned a value.
+	5. Null: Represents an intentional absence of value.
+	6. Symbol:  Represents unique and immutable values.
+	7. BigInt: Used for large integers beyond Number.MAX_SAFE_INTEGER.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is variable ? Explain var, let, and const ?
+Answer:  variable is used to store data. var , let and const used for variable declaration in js.
+
+	var: 
+	    var is function-scoped variable, 
+	    var are hoisted, 
+	    var can be re-assign and re-define.
+	    var binds to this keyword. 
+
+	let: 
+	    let is Block-scope variable, 
+	    let can-not be hoisted,
+	    let can-not be re-declare but let can be reassign.
+	    let can-not binds to this keyword.	
+
+	const: 
+	      const is Block-scope variable, 
+	      const can-not be hoisted,
+	      const can-not be re-declare and reassign,	
+	      const can-not binds to this keyword,
+	      const can be assign only once, and its value can-not be changed afterwards.
+----------------------------------------------------------------------------------------------------------------------------------------------- 
+#	What is the difference between == and === ?
+Answer: In JavaScript, == is the loose equality operator, which compares two values for equality after performing type coercion if necessary. 
+        This means it converts the operands to the same type before comparing.
+
+	=== is the strict equality operator, which compares both the values and their types, without performing type conversion.
+
+	Note : Type coercion means automatically converting one data type to another when necessary if the data types don't match.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is the difference between null and undefined ?
+Answer: Undfined : Undfined is automatically assigned to a variable that has been declared but not assigned a value.
+		   It indicates that the variable exists but has not been initialized yet.
+	
+	Null : Null represent intetional absence of any value. 
+		We use NUll when we don't want to assign any value to a variable if we want to assign it later.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What are Template Literals in JavaScript?
+Answer: Template Literals (also called Template Strings) in JavaScript denoted with ``(backticks), 
+	By using Template Literals we can easily concatenate strings. provide a cleaner and more readable way to work with strings.
+	With Template Literals, you can easily include variables and expressions directly in strings using ${}
+	All we have to do is put the expression inside ‘${}’. without needing to use the + operator for concatenation.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is the use of Object.freeze?
+Answer: Object.freeze is used if we want to freeze or fix the values of an object so that it cannot be changed or modified.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is the use of the isNaN function ?
+Answer: As a name suggest is Not a Number function checks if given value is not a Number. If the output cannot be coersed or converted into a number
+	then isNaN returns True ,(Although type of NaN is Number it still treated as a number.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	Use of typeof operator ?
+Answer: The typeof operator in JavaScript is used to determine the type of a given value or a variable and It returns a string.
+	It helps in type checking during debugging or handling data differntly based on its type.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is the purpose of closures? 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is event delegation? 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Explain the concept of hoisting.  
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is the this keyword? 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is the difference between map(), forEach(), filter(), and reduce()?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What are Promises, and how do they work? 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is async/await? How is it different from Promises? 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What are higher-order functions? 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What are JavaScript modules?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Why do we use the word “debugger” in javascript?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Explain Implicit Type Coercion in javascript.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Is javascript a statically typed or a dynamically typed language?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is NaN property in JavaScript?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Explain passed by value and passed by reference.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is an Immediately Invoked Function in JavaScript?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What do you mean by strict mode in javascript and characteristics of javascript strict-mode?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is the event loop in JavaScript?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is the difference between synchronous and asynchronous programming?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Explain immutability and why it's important.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+How is memory managed in JavaScript?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is the difference between prototypal inheritance and classical inheritance?
+
+What is the difference between call(), apply(), and bind()?
+
+What do you mean by Self Invoking Functions?
+
+What is the difference between exec () and test () methods in javascript?
+
+What is currying in JavaScript?
+
+What are some advantages of using External JavaScript?
+
+Explain Scope and Scope Chain in javascript.
+
+Mention some advantages of javascript.
+
+What are object prototypes?
+
+What are callbacks?
+
+What are the types of errors in javascript?
+
+What is memoization?
+
+What is recursion in a programming language?
+
+What is the use of a constructor function in javascript?
+
+What is DOM?
+
+Which method is used to retrieve a character from a certain index?
+
+What do you mean by BOM?
+
+What is the distinction between client-side and server-side JavaScript?
+
+What are arrow functions?
+
+What do mean by prototype design pattern?
+
+What is the rest parameter and spread operator?
+
+In JavaScript, how many different methods can you make an object?
+
+What are classes in javascript?
+
+What are generator functions?
+
+Explain WeakSet in javascript.
+
+Explain WeakMap in javascript.
+
+What is Object Destructuring?
+
+Difference between prototypal and classical inheritance
+
+What is a Temporal Dead Zone?
+
+What do you mean by JavaScript Design Patterns?
+
+Is JavaScript a pass-by-reference or pass-by-value language?
+
+What is the role of deferred scripts in JavaScript?
+
+What has to be done in order to put Lexical Scoping into practice?
+
+What is Bubbling and Capturing?
+
+What is the difference between for..of and for..in?
+
+What is the reason behind adding Symbol to ES6?
+
+What is Babel?
+
+Name some array methods that were introduced in ES6
+
+Name some string functions introduced in ES6.
+
+Compare the ES5 and ES6 codes for object initialization and parsing returned objects.
+
+How do you use Destructuring Assignment to swap variables?
+
+What is the result of the spread operator array shown below?
+
+ Which keyword can be used to deploy inheritance in ES6?
+
+Explain the Rest parameter in ES6.
+
+What are the object oriented features supported in ES6.
+
+ Give a thorough comparison between ES5 and ES6.
+
+What is the difference between let and const? What distinguishes both from var?
+
+When should one not use arrow functions?
+
+What is the generator function?
+
+What is the “spread” operator in ES6?
+
+Explain Destructuring in ES6.
+
+What are Promises in ES6?
+
+Mention some popular features of ES6.
+
+Why should one use ES6 classes?
+
+How can you create a class in ES6?
+
+What is a class expression?
+
+What do you understand about default parameters?
+
+What do you understand about IIFE (Immediately Invoked Function Expressions)?
+
+What are the states of Promises in ES6?
+
+What is Export Default and Named Export in ES6?
+
+What is the Prototype Design Pattern?
+
+What is a WeakMap in ES6? How is it different from a Map?
+
+What is the advantage of using the arrow syntax for a constructor method?
+
+What is the difference between Set and WeakSet in ES6?
+
+What are Proxy in ES6?
+
+What is the difference between const and Object.freeze().
+
+Explain Internationalization and Localization.
+
+What is Webpack?
+
+# Is JavaScript a compiled or interpreted language ?
+# Is there any relation between Java and JavaScript ?
+# What is ECMAScript ?
+# What is V8 JavaScript engine ?
+# Why do we call javascript as dynamic language ?
+# What is an event loop ?
+# What is call stack ?
+# What is an event queue ?
+# What is global execution context ?
+# What is function execution context ?
+# What are template literals ?
+# What are the differences between primitives and non-primitives ?
+# What is the Temporal Dead Zone ?
+# What is a rest parameter ?
+# What is a spread operator ?
+# What are the differences between spread operator and rest parameter ?
+# What are the types of loops in javascript ?
+# What are the differences between for...of and for...in statements ?
+# What is the difference between map and forEach functions ?
+# What are the possible ways to create objects in JavaScript ?
+# What is JSON and its common operations ?
+# What is Array and its method ?
+# What is the purpose of the array slice method ?
+# What is the purpose of the array splice method ?
+# What is the difference between slice and splice ?
+# What is the difference between substring and substr methods ? 
+# How do you combine two or more arrays ?
+# What is the difference between Shallow and Deep copy ?
+# What is arrow function ?
+# What is a higher order function ?
+# What is the currying function ?
+# What is a pure function ?
+# What is the Temporal Dead Zone ?
+# What is an IIFE (Immediately Invoked Function Expression) ?
+# What is memoization ?
+# What is Hoisting ?
+# What are closures ?
+# What is scope in javascript ?
+# What are the differences between cookie, local storage and session storage ?
+# What is a Cookie ?
+# Why do you need a Cookie ?
+# Why do you need web storage ?
+# What is a promise ?
+# Why do you need a promise ?
+# What are the three states of promise ?
+# What are the pros and cons of promises over callbacks ?
+# What is a callback function ?
+# Why do we need callbacks ?
+# What is a callback hell ?
+# What is promise chaining ?
+# What is a strict mode in javascript ?
+# Why do you need strict mode ?
+# How do you declare strict mode ?
+
+# What is eval ?
+# What is the difference between window and document ?
+# What is event bubbling ?
+# What is event capturing ?
+# How do you submit a form using JavaScript ?
+# What are events ?
+# What is the use of preventDefault method ?
+# What is the use of stopPropagation method ?
+# What is the use of setTimeout ?
+# What is the use of setInterval ?
+# Why is JavaScript treated as Single threaded ?
+# What is JSON ?
+# What are the syntax rules of JSON ?
+# What is the purpose JSON stringify ?
+# How do you parse JSON string ?
+# Why do you need JSON ?
+# What is the purpose of clearTimeout method ?
+# What is the purpose of clearInterval method ?
+# How do you get the current url with javascript ?
+# How do you make first letter of the string in an uppercase ?
+# How do you display the current date in javascript ?
+# What are break and continue statements ?
+# How do you change the style of a HTML element ?
+# What is the difference between proto and prototype ?
+# How can you get the list of keys of any object ?
+# What is an anonymous function ?
+# What are the advantages of Getters and Setters ?
+# What is the purpose of switch-case ?
+# What are primitive data types ?
+# What are the different methods to find HTML elements in DOM ?
+# What is debouncing ?
+# What is throttling ? 
+# What is optional chaining ?
