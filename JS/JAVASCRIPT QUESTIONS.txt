@@ -71,6 +71,21 @@ Answer: In JavaScript, == is the loose equality operator, which compares two val
 
 	Note : Type coercion means automatically converting one data type to another when necessary if the data types don't match.
 -----------------------------------------------------------------------------------------------------------------------------------------------
+# 	What is scope in javascript ?
+Answer:  "scope" refers to the context in which variables and functions are declared and accessed. 
+	It defines the visibility and accessibility of these variables and functions within the code. 
+	scope is crucial for managing the lifecycle and behaviour of variables and functions in a program.
+
+	Types of Scope in JavaScript - 
+	  1. Global Scope :
+		Variables declared outside any function or block belong to the global scope and can be accessed anywhere in the code.
+	  2. Function (Local) Scope :
+		Variables declared inside a function are only accessible within that function.
+	  3. Block Scope (let & const) :
+		let and const have block scope, meaning they are accessible only within the block ({}) where they are declared.
+	  4. Lexical Scope (Closures) :
+		Inner functions inherit variables from their outer function scope (closure).
+-----------------------------------------------------------------------------------------------------------------------------------------------
 #	What is the difference between null and undefined ?
 Answer: Undfined : Undfined is automatically assigned to a variable that has been declared but not assigned a value.
 		   It indicates that the variable exists but has not been initialized yet.
@@ -87,6 +102,24 @@ Answer: Template Literals (also called Template Strings) in JavaScript denoted w
 #	What is the use of Object.freeze?
 Answer: Object.freeze is used if we want to freeze or fix the values of an object so that it cannot be changed or modified.
 -----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is NaN property in JavaScript?
+Answer: NaN (Not-a-Number) is a special property in JavaScript that represents a value that is not a valid number
+	Even though NaN means "Not-a-Number", its type is still "number".
+
+#	How can you check if a value is NaN?
+Answer: Use isNaN() or Number.isNaN() to check if a value is NaN.
+
+	 Difference:
+		isNaN(value) tries to convert the value into a number before checking.
+		Number.isNaN(value) strictly checks if the value is NaN without conversion (better choice).
+
+#	What happens when you compare NaN with any other value?
+Answer: NaN is not equal to any value, including itself.
+
+#	How does isNaN() behave differently from Number.isNaN()?
+Answer: isNaN(value) tries to convert the value to a number before checking, while Number.isNaN(value) does a strict check.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
 #	What is the use of the isNaN function ?
 Answer: As a name suggest is Not a Number function checks if given value is not a Number. If the output cannot be coersed or converted into a number
 	then isNaN returns True ,(Although type of NaN is Number it still treated as a number.
@@ -95,23 +128,159 @@ Answer: As a name suggest is Not a Number function checks if given value is not 
 Answer: The typeof operator in JavaScript is used to determine the type of a given value or a variable and It returns a string.
 	It helps in type checking during debugging or handling data differntly based on its type.
 -----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is Hoisting ?
+Answer: In case of any other programming languages calling a function or variable it is declared will throw an error. But due to weird nature of js,
+	this will actually execute the code print the output as well. This phenominon is called as Hoisting. 
+	 Hoisting is a JavaScript behavior where variable and function declarations are moved/hoisted to the top of their scope before execution. 
+	This means we can use functions and variables before declaring them in the code.
+
+	Key Points About Hoisting
+		Variables declared with var are hoisted but initialized as undefined.
+		Variables declared with let and const are hoisted but not initialized.
+		Function declarations are fully hoisted, but function expressions are not.
+		Always declare variables at the top to avoid unexpected behavior.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What is the purpose of closures? 
+#	What is the purpose of closures ?
+Answer: A closure in JavaScript allows a function to remember and access variables from its outer scope, even after the outer function has finished executing.
+
+	:: Purpose of Closures ::
+	1. Data Encapsulation (Private Variables) :
+		Closures help create private variables that cannot be accessed directly from outside.
+	2. Event Handlers & Callbacks :
+		Closures are commonly used in event listeners to preserve values.
+ 
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What is event delegation? 
+#	What is a Temporal Dead Zone ?
+Answer: The Temporal Dead Zone (TDZ) is the time between the start of a block and when a variable is declared using let or const.
+	Accessing the variable before its declaration results in a ReferenceError.( During this time, trying to access the variable throws a ReferenceError)
+
+#	Do var variables have a Temporal Dead Zone?
+Answer: No! var does not have a TDZ because it is hoisted and initialized as undefined.
+
+#	 Why does accessing a let or const variable before declaration cause a ReferenceError?
+Answer: let and const variables are hoisted, but they are not initialized until their declaration.
+	This means they exist in the Temporal Dead Zone (TDZ) until the code reaches their declaration.
+	Accessing them before declaration results in a ReferenceError.
+
+#	How long does the TDZ last for a let or const variable?
+Answer: The TDZ starts when the scope is entered and ends when the variable is declared.
+
+#	What happens if you use a let variable before its declaration inside a function?
+Answer: The variable will be in the TDZ, and accessing it before declaration causes a ReferenceError.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-Explain the concept of hoisting.  
+#	What is the this keyword ?
+Answer: this keyword represent current instance of an object.
+	The this keyword refers to the object that is currently executing the code. Its value is
+	determined by how a function is called, and it provides a way to access object properties and
+	methods within a function
+	
+	 Note -->
+		 this does not always represent an object’s current instance.
+		 Its behavior depends on how and where the function is invoked.
+		 Arrow functions do not have their own this.
+		 Instead, they inherit this from the surrounding lexical scope (the context in which they were defined)
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What is the this keyword? 
+#	What is the difference between function declarations and function expressions ?
+Answer: Function Declaration:
+	 	A function declaration is a statement that defines a function in JavaScript. 
+	 	It is hoisted to the top of its scope, meaning the function can be called before its actual definition in the code.	
+
+	Function Expression:
+		A function expression defines a function as part of an expression and assigns it to a variable. 
+		It does not get hoisted in the same way as function declarations.
+
+#	What is arrow function ?
+Answer: An arrow function (=>) is a shorter and more concise way to write functions in JavaScript. It was introduced in ES6 and provides a 
+	cleaner syntax compared to traditional functions.
+	
+	Arrow functions do not create their own this; they inherit this from their surrounding scope.
+
+#	 What is an arrow function, and how is it different from a normal function?
+Answer: An arrow function (=>) is a shorter way to write functions in JavaScript. It does not have its own this, arguments, or prototype, 
+	making it different from a normal function.
+
+#	Can an arrow function be used as a constructor?
+Answer: No, arrow functions cannot be used as constructors because they do not have a prototype.
+
+#	Can you use an arrow function inside an object method?
+Answer:	No, because arrow functions do not have their own this.
+
+#	When should you not use arrow functions?
+Answer: Avoid using arrow functions in the following cases:
+
+	Object Methods (because this does not refer to the object).
+	As Constructors (because they do not support new).
+	When arguments is needed (since arrow functions do not have it).
+	When using this dynamically (like event handlers).
 -----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is an IIFE (Immediately Invoked Function Expression) ?
+Answer: A Self-Invoking Function (also called an Immediately Invoked Function Expression (IIFE)) is a function that executes 
+	immediately after being defined, without needing to be called separately.
+
+	Explanation:
+		The function is wrapped inside parentheses to make it an expression.
+		The () at the end immediately invokes (calls) the function.
+
+#	Why Use a Self-Invoking Function ?
+Answer: To avoid Polluting the Global Scope :
+		Variables inside an IIFE cannot be accessed outside, keeping the global scope clean.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+# 	What is a higher order function ?
+Answer: A Higher-Order Function (HOF) is a function that takes another function as an argument or returns a function as its result.
+	Built-in Higher-Order Functions in JavaScript are map(), filter(), reduce(), forEach(), etc. (because they take callback functions as arguments)
+
+
+# 	What is the currying function ?
+Answer: 
+
+
+# What is a pure function ?
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+  
+
+#	What are generator functions in Javascript?
+Answer: In JavaScript, generator functions are a special kind of function that allows you to control the execution flow and pause/resume it at
+	certain points. Generator functions are defined using the syntax and use the keyword to produce a sequence of values.
+	When a generator function is called, it returns an iterator called a generator.
+
+	:: Key Features of Generator Functions:
+	  Defined with the function* Syntax:
+		Generator functions are defined using function* instead of function.
+
+	yield Keyword:
+	  The yield keyword is used to pause the execution of the function and return a value. Each time the generator function is called, 
+	  it resumes execution from where it last left off.
+
+	Returns an Iterator:
+	  Calling a generator function returns a generator object, which is an iterator. This iterator can be used to control the flow of the function 
+	   using methods like .next(). 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What are prototypes in Javascript?
+Answer: Every object in JavaScript has a prototype, which acts as a blueprint for shared properties and methods.
+	When you try to access a property or method on an object, JavaScript first checks the object itself.
+	If it's not found, it looks up the prototype chain
+
+
+
+
 What is the difference between map(), forEach(), filter(), and reduce()?
 -----------------------------------------------------------------------------------------------------------------------------------------------
 What are Promises, and how do they work? 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 What is async/await? How is it different from Promises? 
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What are higher-order functions? 
 -----------------------------------------------------------------------------------------------------------------------------------------------
+What is event delegation? 
+
 What are JavaScript modules?
 -----------------------------------------------------------------------------------------------------------------------------------------------
 Why do we use the word “debugger” in javascript?
@@ -120,7 +289,6 @@ Explain Implicit Type Coercion in javascript.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 Is javascript a statically typed or a dynamically typed language?
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What is NaN property in JavaScript?
 -----------------------------------------------------------------------------------------------------------------------------------------------
 Explain passed by value and passed by reference.
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -140,17 +308,18 @@ What is the difference between prototypal inheritance and classical inheritance?
 
 What is the difference between call(), apply(), and bind()?
 
-What do you mean by Self Invoking Functions?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+What is event delegation? 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+  
+
 
 What is the difference between exec () and test () methods in javascript?
 
 What is currying in JavaScript?
 
-What are some advantages of using External JavaScript?
-
-Explain Scope and Scope Chain in javascript.
-
-Mention some advantages of javascript.
+What are some advantages of using External JavaScript ?
 
 What are object prototypes?
 
@@ -172,17 +341,11 @@ What do you mean by BOM?
 
 What is the distinction between client-side and server-side JavaScript?
 
-What are arrow functions?
-
-What do mean by prototype design pattern?
-
 What is the rest parameter and spread operator?
 
 In JavaScript, how many different methods can you make an object?
 
 What are classes in javascript?
-
-What are generator functions?
 
 Explain WeakSet in javascript.
 
@@ -192,7 +355,6 @@ What is Object Destructuring?
 
 Difference between prototypal and classical inheritance
 
-What is a Temporal Dead Zone?
 
 What do you mean by JavaScript Design Patterns?
 
@@ -226,13 +388,6 @@ Explain the Rest parameter in ES6.
 
 What are the object oriented features supported in ES6.
 
- Give a thorough comparison between ES5 and ES6.
-
-What is the difference between let and const? What distinguishes both from var?
-
-When should one not use arrow functions?
-
-What is the generator function?
 
 What is the “spread” operator in ES6?
 
@@ -242,21 +397,16 @@ What are Promises in ES6?
 
 Mention some popular features of ES6.
 
-Why should one use ES6 classes?
-
 How can you create a class in ES6?
 
 What is a class expression?
 
 What do you understand about default parameters?
 
-What do you understand about IIFE (Immediately Invoked Function Expressions)?
-
 What are the states of Promises in ES6?
 
 What is Export Default and Named Export in ES6?
 
-What is the Prototype Design Pattern?
 
 What is a WeakMap in ES6? How is it different from a Map?
 
@@ -300,16 +450,12 @@ What is Webpack?
 # What is the difference between substring and substr methods ? 
 # How do you combine two or more arrays ?
 # What is the difference between Shallow and Deep copy ?
-# What is arrow function ?
-# What is a higher order function ?
-# What is the currying function ?
-# What is a pure function ?
-# What is the Temporal Dead Zone ?
-# What is an IIFE (Immediately Invoked Function Expression) ?
+
+
+
+
 # What is memoization ?
-# What is Hoisting ?
-# What are closures ?
-# What is scope in javascript ?
+
 # What are the differences between cookie, local storage and session storage ?
 # What is a Cookie ?
 # Why do you need a Cookie ?
