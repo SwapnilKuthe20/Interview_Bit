@@ -5,18 +5,31 @@
 Answer: JavaScript (JS) is a high-level, interpreted programming language primarily used to create dynamic and interactive web applications. 
 	It is a single-threaded, dynamically typed, and event-driven language that runs in the browser as well as on the server using environments like Node.js. 
 	
-	Key Features:
+	 :: Key Features ::
+# 	Why do we call javascript as dynamic language ?
 	Dynamically Typed:
 		In JavaScript, you don’t need to specify a variable's type (like number or string). 
 		JS is a dynamically typed language which means that data-type of variables are determined by the value they hold at a runtime.						Also, you can change the type later by assigning a different value.
-	
+
+#	Is JavaScript a compiled or interpreted language ?	
 	Interpreted Language: 
 		JavaScript is an interpreted language, meaning its code is executed line by line by the JavaScript engine. 
 		modern JavaScript engines like V8 (Chrome, Node.js) use Just-In-Time (JIT) compilation which compiled JS code into machine code at runtime, 
-		rather than being fully compiled before execution.
+		rather than being fully compiled before execution.	
 	
-	Single-Threaded: 
-		because it executes one task at a time in a single execution thread. (using a call stack)
+#	Why Is JavaScript Treated as Single-Threaded?
+Answer: JavaScript Is Single-Threaded Because of Its Execution Model
+	JavaScript executes one operation at a time, meaning it has only one call stack.
+	It follows the synchronous execution model, where each operation must complete before moving to the next.
+	(Single-Threaded: because it executes one task at a time in a single execution thread. (using a call stack)
+
+	JavaScript Uses an Event Loop for Asynchronous Operations
+	Even though JavaScript is single-threaded, it can handle asynchronous tasks (like API calls, setTimeout, etc.).
+	The Event Loop helps JavaScript manage multiple tasks without blocking execution.
+	It handles asynchronous tasks using the Event Loop and Web APIs.
+
+#	How does JavaScript handle asynchronous operations if it's single-threaded?
+Answer: JavaScript uses the Event Loop along with Web APIs, Callback Queue, and Promises to handle asynchronous tasks without blocking execution.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 #	What are the different data-types in JavaScript ? 
 Answer: Mainly there are two types of data-type Primitive and Non-Primitive Data-Type also known as Reference Type .
@@ -40,6 +53,16 @@ Answer: Mainly there are two types of data-type Primitive and Non-Primitive Data
 	5. Null: Represents an intentional absence of value.
 	6. Symbol:  Represents unique and immutable values.
 	7. BigInt: Used for large integers beyond Number.MAX_SAFE_INTEGER.
+
+#	Pass-by-Value (Primitive Types)
+		In JavaScript, primitive types (like number, string, boolean, undefined, null, symbol, and bigint) are passed by value. 
+		This means that when you pass a primitive value to a function, a copy of the original value is created. 
+		The function operates on the copy, and any changes made to the copy will not affect the original value.
+
+#	Pass-by-Reference (Reference Types)
+		For reference types (like objects, arrays, and functions), JavaScript behaves like pass-by-reference. 
+		When a reference type is passed to a function, the reference (or memory address) to the object is passed, not the actual object itself. 
+		Therefore, changes made to the object inside the function will affect the original object outside the function.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 #	What is variable ? Explain var, let, and const ?
 Answer:  variable is used to store data. var , let and const used for variable declaration in js.
@@ -98,6 +121,12 @@ Answer: Template Literals (also called Template Strings) in JavaScript denoted w
 	By using Template Literals we can easily concatenate strings. provide a cleaner and more readable way to work with strings.
 	With Template Literals, you can easily include variables and expressions directly in strings using ${}
 	All we have to do is put the expression inside ‘${}’. without needing to use the + operator for concatenation.
+
+
+# 	What are template literals ?
+Answer: A template literal in JavaScript is a way to create strings using backticks (`), which makes string manipulation easier.
+	Unlike regular strings, template literals allow you to embed expressions inside the string using ${}.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
 #	What is the use of Object.freeze?
 Answer: Object.freeze is used if we want to freeze or fix the values of an object so that it cannot be changed or modified.
@@ -119,6 +148,10 @@ Answer: NaN is not equal to any value, including itself.
 #	How does isNaN() behave differently from Number.isNaN()?
 Answer: isNaN(value) tries to convert the value to a number before checking, while Number.isNaN(value) does a strict check.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What are truthy and falsy values?
+Answer: Truthy values are values that evaluate to true when coerced to a boolean, whereas Falsy values are values that evaluate to false 
+	when coerced to a boolean. There are 6 types of falsy values in JavaScript: false, 0, “” empty string, null, undefined, and NaN.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 #	What is the use of the isNaN function ?
 Answer: As a name suggest is Not a Number function checks if given value is not a Number. If the output cannot be coersed or converted into a number
@@ -183,12 +216,21 @@ Answer: this keyword represent current instance of an object.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 #	What is the difference between function declarations and function expressions ?
 Answer: Function Declaration:
+		Function as a Statement
+		It starts with ‘function’ keyword
+		It can return value or other function
+		This function declaration gets hoisted to the top
+		
 	 	A function declaration is a statement that defines a function in JavaScript. 
 	 	It is hoisted to the top of its scope, meaning the function can be called before its actual definition in the code.	
 
 	Function Expression:
 		A function expression defines a function as part of an expression and assigns it to a variable. 
-		It does not get hoisted in the same way as function declarations.
+		Function can be anonymous i.e. not have a name.
+		It does not get hoisted.
+
+#	What are the different ways to define a function in JavaScript?
+Answer: Functions in JavaScript can be defined using function declarations, function expressions,arrow functions, and methods within objects.
 
 #	What is arrow function ?
 Answer: An arrow function (=>) is a shorter and more concise way to write functions in JavaScript. It was introduced in ES6 and provides a 
@@ -238,15 +280,14 @@ Answer:
 
 # What is a pure function ?
 
+# 	What is an anonymous function ?
+Answer: These are function that do not have a name
+	They are used mostly as callback functions
 
-
-
-
-
+	An anonymous function in JavaScript is a function that is defined without being given a name. 
+	It can be assigned to a variable, passed as an argument to another function, or returned from another function. 
+	These functions are usually used when you don't need to reuse the function, and their purpose is often temporary or for a specific task.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-
-  
-
 #	What are generator functions in Javascript?
 Answer: In JavaScript, generator functions are a special kind of function that allows you to control the execution flow and pause/resume it at
 	certain points. Generator functions are defined using the syntax and use the keyword to produce a sequence of values.
@@ -269,17 +310,88 @@ Answer: Every object in JavaScript has a prototype, which acts as a blueprint fo
 	When you try to access a property or method on an object, JavaScript first checks the object itself.
 	If it's not found, it looks up the prototype chain
 
+#	What Are Object Prototypes in JavaScript?
+Answer: In JavaScript, every object has a special property called prototype, which allows objects to inherit properties and methods from other objects.
 
-
-
+-----------------------------------------------------------------------------------------------------------------------------------------------
 What is the difference between map(), forEach(), filter(), and reduce()?
 -----------------------------------------------------------------------------------------------------------------------------------------------
 What are Promises, and how do they work? 
 -----------------------------------------------------------------------------------------------------------------------------------------------
 What is async/await? How is it different from Promises? 
 -----------------------------------------------------------------------------------------------------------------------------------------------
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What is event delegation? 
+#	What are events ?
+Answer: An event is an action or occurrence that happens in the browser, such as a button click or page load. 
+	JavaScript can respond to these events by executing code in response
+
+#	What is Event Bubbling and Event Capturing ?
+Answer: Event Bubbling is a propagation model where events are handled from innermost element to the outermost.
+	Event Capturing is a propagation model where events are handled from outermost element to the innermost.
+
+	 Form Validation (Using Bubbling)
+	🔹 Use Case: Validating multiple input fields in a form.
+
+	🔹 Scenario: You have a form with multiple input fields. Instead of adding a validation function to each field, 
+		     you attach a single event listener to the form and handle validation using bubbling.
+	🔹 Explanation:
+		     The input event bubbles up to the form.
+		     No need to attach event listeners to each field separately.
+
+#	Which event propagation model is used by default in JavaScript?
+Answer: Event Bubbling is the default behavior.
+
+#	How can you enable event capturing in JavaScript?
+Answer: By passing true as the third argument in addEventListener().
+	Example :
+		element.addEventListener("click", handlerFunction, true);
+
+#	How do you stop event bubbling?
+Answer: Use event.stopPropagation() inside the event handler.
+
+#	Can event bubbling and capturing occur at the same time?
+Answer: Yes, JavaScript first executes capturing, then reaches the target element, and finally performs bubbling.
+
+#	What is event delegation, and how does it relate to event bubbling ?
+Answer: Event delegation is a technique where a parent element is used to handle events for multiple child elements.
+	It works because event bubbling allows the event to reach the parent.
+
+#	When should you use event delegation?
+Answer: When you have multiple dynamic elements (e.g., adding/removing list items).
+	When you want to improve performance by attaching one event listener instead of multiple.
+
+#	What happens if event.stopPropagation() is called in the capturing phase ?
+Answer: The event stops propagating in the capturing phase and never reaches the target element or bubbling phase.
+
+#	What is the difference between event.stopPropagation() and event.stopImmediatePropagation()?
+Answer: event.stopPropagation() stops the event from bubbling further up but allows other event listeners on the same element to execute.
+	event.stopImmediatePropagation() stops the event entirely, including other event listeners on the same element.
+
+#	Can event listeners be removed? If yes, how?
+Answer: Yes, using removeEventListener().
+
+#	What is the event object (event or e) in JavaScript?
+Answer: The event object is automatically passed to an event handler.
+	It contains details like target, type, and propagation methods (stopPropagation(), preventDefault(), etc.).
+
+#	# What is the use of preventDefault method ?
+Answer: event.preventDefault() (Prevents Default Action)
+	Use Case: Stops the browser’s default action for an event.
+	Example: Preventing form submission or disabling a link’s redirection.
+
+# What is the use of stopPropagation method ?
+Answer: Use Case: Prevents an event from bubbling up to parent elements.
+	Example: Preventing a click event from reaching parent elements.
+
+	✅ Use preventDefault() to stop browser's default behavior (e.g., form submission, link navigation).
+	✅ Use stopPropagation() to stop event bubbling (when you don’t want parent elements to receive the event).
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+#	What is recursion in a programming language?
+Answer: A recursive function is a function that calls itself repeatedly to solve smaller instances of the same problem,
+	 eventually reaching a base case to stop recursion.
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
 What are JavaScript modules?
 -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -287,49 +399,66 @@ Why do we use the word “debugger” in javascript?
 -----------------------------------------------------------------------------------------------------------------------------------------------
 Explain Implicit Type Coercion in javascript.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-Is javascript a statically typed or a dynamically typed language?
------------------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------------------------------
-Explain passed by value and passed by reference.
------------------------------------------------------------------------------------------------------------------------------------------------
-What is an Immediately Invoked Function in JavaScript?
------------------------------------------------------------------------------------------------------------------------------------------------
 What do you mean by strict mode in javascript and characteristics of javascript strict-mode?
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What is the event loop in JavaScript?
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What is the difference between synchronous and asynchronous programming?
+#	What is the difference between synchronous and asynchronous programming ?
+Answer: 1. Synchronous Programming:
+		In synchronous programming, tasks are executed one after the other, in a sequential manner. 
+		The program will wait for each task to complete before moving on to the next one.
+
+	2. Asynchronous Programming:
+		In asynchronous programming, tasks are executed out of order, allowing the program to start other tasks before the current one finishes. 
+		This non-blocking behavior is essential for tasks that take a long time (e.g., network requests, reading files) 
+		because it allows the program to continue running without waiting for these tasks to complete.
+
 -----------------------------------------------------------------------------------------------------------------------------------------------
-Explain immutability and why it's important.
+#	Explain immutability and why it's important ?
+Answer: Immutability refers to the concept where once an object or value is created, it cannot be changed or modified. 
+	Instead of modifying the existing object, a new object is created with the updated value. 
+	This concept applies primarily to data structures like objects, arrays, and variables, ensuring that they remain constant throughout the program's execution.
+
+	In JavaScript, primitives (like numbers, strings, and booleans) are inherently immutable. However, objects and arrays are mutable by default.
+
+#	What do you understand about Mutable and Immutable in the context of JavaScript?
+Answer: In JavaScript, we have different data types, out of which some are mutable and some are immutable.
+
+	Mutable means that the value of such variables can be changed directly after their creation. Example – Arrays and Objects.
+
+	Immutable means their value cannot be changed after their creation. Examples – numbers, and strings.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-How is memory managed in JavaScript?
+#	How is memory managed in JavaScript ?
+Answer: JavaScript relies on automatic garbage collection to manage memory, meaning developers don't need to manually allocate or deallocate memory.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 What is the difference between prototypal inheritance and classical inheritance?
 
-What is the difference between call(), apply(), and bind()?
+#	What is the difference between call(), apply(), and bind()?
+Answer: In JavaScript, the call, apply, and bind methods are used to manipulate how a function is invoked and set the value of this within
+	the function.
+ 	
+	1. call() -->
+		 Purpose: Invokes a function, allowing you to specify the this context and pass arguments individually.
+		 Syntax: functionName.call(thisArg, arg1, arg2, ...)
+		 call : koi fn ko call kr skte h.
 
+	2. apply() -->
+		 Purpose: Similar to call(), but arguments are passed as an array.
+		 Syntax: functionName.apply(thisArg, [arg1, arg2, ...])
+
+	 3. bind()
+		 Purpose: Returns a new function with this bound to the specified context. It does not invoke the function immediately.
+		 Syntax: const boundFunction = functionName.bind(thisArg, arg1, arg2, ...)
 -----------------------------------------------------------------------------------------------------------------------------------------------
-What is event delegation? 
+#	What is currying in JavaScript ?
+Answer: Currying in JavaScript is functional programming which is technique that turns a function with multiple arguments into 
+	a sequence of functions each of which expects a single argument.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-
-  
-
-
-What is the difference between exec () and test () methods in javascript?
-
-What is currying in JavaScript?
-
 What are some advantages of using External JavaScript ?
-
-What are object prototypes?
-
+What is the difference between exec () and test () methods in javascript?
 What are callbacks?
 
-What are the types of errors in javascript?
-
 What is memoization?
-
-What is recursion in a programming language?
 
 What is the use of a constructor function in javascript?
 
@@ -341,8 +470,6 @@ What do you mean by BOM?
 
 What is the distinction between client-side and server-side JavaScript?
 
-What is the rest parameter and spread operator?
-
 In JavaScript, how many different methods can you make an object?
 
 What are classes in javascript?
@@ -351,30 +478,15 @@ Explain WeakSet in javascript.
 
 Explain WeakMap in javascript.
 
-What is Object Destructuring?
-
 Difference between prototypal and classical inheritance
-
 
 What do you mean by JavaScript Design Patterns?
 
-Is JavaScript a pass-by-reference or pass-by-value language?
-
 What is the role of deferred scripts in JavaScript?
-
-What has to be done in order to put Lexical Scoping into practice?
-
-What is Bubbling and Capturing?
 
 What is the difference between for..of and for..in?
 
 What is the reason behind adding Symbol to ES6?
-
-What is Babel?
-
-Name some array methods that were introduced in ES6
-
-Name some string functions introduced in ES6.
 
 Compare the ES5 and ES6 codes for object initialization and parsing returned objects.
 
@@ -384,14 +496,7 @@ What is the result of the spread operator array shown below?
 
  Which keyword can be used to deploy inheritance in ES6?
 
-Explain the Rest parameter in ES6.
-
 What are the object oriented features supported in ES6.
-
-
-What is the “spread” operator in ES6?
-
-Explain Destructuring in ES6.
 
 What are Promises in ES6?
 
@@ -407,7 +512,6 @@ What are the states of Promises in ES6?
 
 What is Export Default and Named Export in ES6?
 
-
 What is a WeakMap in ES6? How is it different from a Map?
 
 What is the advantage of using the arrow syntax for a constructor method?
@@ -416,46 +520,88 @@ What is the difference between Set and WeakSet in ES6?
 
 What are Proxy in ES6?
 
-What is the difference between const and Object.freeze().
 
 Explain Internationalization and Localization.
 
 What is Webpack?
 
-# Is JavaScript a compiled or interpreted language ?
+
 # Is there any relation between Java and JavaScript ?
 # What is ECMAScript ?
-# What is V8 JavaScript engine ?
-# Why do we call javascript as dynamic language ?
-# What is an event loop ?
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is the Event Loop, and how does it help JavaScript remain non-blocking?
+Answer: The Event Loop is a mechanism that moves asynchronous callbacks (from the Callback Queue or Microtask Queue) to the Call Stack 
+	when it becomes empty, allowing JavaScript to handle tasks asynchronously despite being single-threaded.
+
 # What is call stack ?
+Answer: The call stack is a data structure that keeps track of function calls in JavaScript, executing them one at a time in a LIFO (Last In, First Out) manner.
+
 # What is an event queue ?
+Answer: The Event Queue is a crucial part of JavaScript’s event-driven, non-blocking execution model. 
+	It is a queue (FIFO: First In, First Out) that holds callback functions waiting to be executed by the event loop when the call stack is empty.
+	
+# What is execution context ?
+# ::: Execution Context :::
+	  The Execution Context in JavaScript is like an environment where your code runs.
+	  It helps JavaScript keep track of variables, functions, and the code's current state.
+	  Think of it as a "workspace" for your code to execute.
+
+	 ::: There are three main types :::
 # What is global execution context ?
+	1. Global Execution Context ::
+		 Created when the script starts executing.
+		 Contains global variables (var, let, const) and functions.
+		 The this keyword refers to the global object (window in browsers, global in Node.js).
+	
 # What is function execution context ?
-# What are template literals ?
-# What are the differences between primitives and non-primitives ?
-# What is the Temporal Dead Zone ?
-# What is a rest parameter ?
-# What is a spread operator ?
-# What are the differences between spread operator and rest parameter ?
+	2. Function Execution Context ::
+		 Every time a function is called, a new execution context is created for that function.
+		 It manages:
+		 Function arguments.
+		 Local variables and functions.
+		 A reference to the outer context for scope chaining.
+
+	3. Eval Execution Context ::
+		 Rarely used; created for code executed inside the eval() function.
+
+#	How does the JavaScript event loop work, and what role do the call stack, task queue, and microtask queue play in it?
+Answer: The answer to this question can be explained step by step in the following way –
+
+	JavaScript executes synchronous code using a call stack (LIFO – Last In, First Out). 
+	Each function call is pushed onto the stack and popped off once it finishes executing.
+	Then we have an event loop in JavaScript that continually checks the call stack and task queues to manage 
+	the execution of synchronous and asynchronous code. It ensures the call stack is empty before picking tasks from the queues.
+
+	JavaScript has Task Queues which are of the following types:
+	Macrotask Queue (Task Queue): Holds tasks like setTimeout, setInterval, setImmediate (Node.js), and I/O operations.
+	Microtask Queue: Holds tasks like Promise.then, MutationObserver, and process.nextTick (Node.js). 
+	Microtasks have higher priority and are executed before macro tasks.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What are errors in JavaScript?
+Answer: Syntax Errors :
+		These occur when the code doesn't follow the correct syntax of the JavaScript language. 
+		Syntax errors prevent the code from being parsed and executed.
+	Reference Errors :
+		Reference errors happen when you try to access a variable that hasn't been declared or defined.
+	Type Errors :
+	A type error happens when a value is not of the expected type for an operation. For example, trying to perform an operation on an undefined or null value.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is a rest parameter ?
+Answer: Rest parameters (...rest) allow a function to accept any number of arguments as an array.
+	They are bundled into a single array.
+
+# 	What is a spread operator ?
+Answer: The Spread operator (represented as three dots or …) is used on iterables like array and string, or properties of Objects. 
+	to expand wherever zero or more elements are required
+-----------------------------------------------------------------------------------------------------------------------------------------------
 # What are the types of loops in javascript ?
 # What are the differences between for...of and for...in statements ?
-# What is the difference between map and forEach functions ?
+
 # What are the possible ways to create objects in JavaScript ?
-# What is JSON and its common operations ?
-# What is Array and its method ?
-# What is the purpose of the array slice method ?
-# What is the purpose of the array splice method ?
-# What is the difference between slice and splice ?
-# What is the difference between substring and substr methods ? 
-# How do you combine two or more arrays ?
+
+
 # What is the difference between Shallow and Deep copy ?
-
-
-
-
 # What is memoization ?
-
 # What are the differences between cookie, local storage and session storage ?
 # What is a Cookie ?
 # Why do you need a Cookie ?
@@ -471,23 +617,15 @@ What is Webpack?
 # What is a strict mode in javascript ?
 # Why do you need strict mode ?
 # How do you declare strict mode ?
-
-# What is eval ?
 # What is the difference between window and document ?
-# What is event bubbling ?
-# What is event capturing ?
-# How do you submit a form using JavaScript ?
-# What are events ?
-# What is the use of preventDefault method ?
-# What is the use of stopPropagation method ?
 # What is the use of setTimeout ?
 # What is the use of setInterval ?
-# Why is JavaScript treated as Single threaded ?
 # What is JSON ?
 # What are the syntax rules of JSON ?
 # What is the purpose JSON stringify ?
 # How do you parse JSON string ?
 # Why do you need JSON ?
+# What is JSON and its common operations ?
 # What is the purpose of clearTimeout method ?
 # What is the purpose of clearInterval method ?
 # How do you get the current url with javascript ?
@@ -497,11 +635,156 @@ What is Webpack?
 # How do you change the style of a HTML element ?
 # What is the difference between proto and prototype ?
 # How can you get the list of keys of any object ?
-# What is an anonymous function ?
 # What are the advantages of Getters and Setters ?
-# What is the purpose of switch-case ?
-# What are primitive data types ?
+
 # What are the different methods to find HTML elements in DOM ?
 # What is debouncing ?
 # What is throttling ? 
-# What is optional chaining ?
+# What is optional chaining ? 
+
+ 
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	What are JavaScript Arrays and its method ?
+Answer: JavaScript Array is a type of object that is used to store a collection of values. 
+	The array can store values of any data type. Ex: string, number, boolean, or array of objects
+
+#	Explain the map(). How is it different from foreach() method ?
+Answer: map() method :
+	The map() method creates a new array by applying a function to each element of an existing array. 	
+	It does not modify the original array but instead returns a transformed version.
+	
+	Key Points of map():
+		✔️ Returns a new array.
+		✔️ Does not modify the original array.
+		✔️ Can be chained with other methods like filter(), reduce(), etc.
+		✔️ Used for transforming data.	
+
+
+	forEach() Method :
+	The forEach() method iterates over each element of an array but does not return anything. 
+	It is mainly used for performing side effects like logging values, modifying elements, or interacting with databases.
+
+	Key Points of forEach():
+		✔️ Does not return a new array (returns undefined).
+		✔️ Used for side effects like console logging, modifying elements, making API calls, etc.
+		✔️ Cannot be chained with other methods like filter() or reduce().
+
+
+#	What do you understand about Array destructuring in JavaScript ?
+Answer: Destructuring was introduced in JS ES6. It is used to unpack the values from the given array and assign them to unique variables.
+
+#	 What is the difference between slice and splice ?
+Answer: The slice()  method is used to return a new array containing a portion of that array. It does not modify the original array rather returns a new array.
+	whereas, 
+	The splice() method is used to remove or replace existing elements in the array. 
+	This method modifies the original array and returns the removed elements as a new array.
+
+#	What happens if you don't provide an end index to slice()?
+Answer: If you don't provide an end index to slice(), it will extract elements from the provided beginning index to the end of the array.
+
+# 	How do you combine two or more arrays ?
+Answer: You can combine two or more arrays in JavaScript using the concat() method or the spread operator (...).
+
+#	What is the purpose of the Array.isArray() method in JavaScript?
+Answer: The Array.isArray() method is used to determine whether a given value is an array or not. 
+	It returns true if the value is an array, and false otherwise.
+
+#	How to convert an array into an object and vice-versa ?
+Answer: 1. Convert an Array into an Object ::
+	
+	Method 1: 
+		Using Object.assign()
+			The Object.assign() method can be used to convert an array into an object, where the array indices become the object keys.
+	Method 2: 
+		Using Object.fromEntries() (For Key-Value Arrays)
+			If you have an array of key-value pairs, you can convert it directly into an object using Object.fromEntries().
+
+	2. Convert an Object into an Array ::
+	
+
+	Method 1: 
+		Using Object.keys()
+			If you only need the keys of an object as an array:
+
+	Method 2: 
+		Using Object.values()
+			If you only need the values of an object as an array:
+
+	Method 3: 
+		Using Object.entries()
+			If you want an array of key-value pairs, use Object.entries().
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+#	how does for loop work in js ?
+Answer: In JavaScript, a for loop is used to repeatedly execute a block of code a specific number of times. 
+	It consists of three parts:
+		Initialization: It sets the initial value of a counter variable.
+		Condition: It specifies the condition that must be true for the loop to continue.
+		Increment/Decrement: It updates the counter variable after each iteration.
+
+#	What is ternary operator in js ?
+Answer: The ternary operator, also known as the conditional operator, is a shorthand way of writing an if-else statement in JavaScript. 
+	It takes three operands: a condition, a value to return if the condition is true, and a value to return if the condition is false.
+
+#	Can you explain JS functions return to me ?
+Answer: In JavaScript, functions can use the return keyword to send a value back to the caller. 
+	When a function is called, the code inside the function is executed. 
+	If there is a return statement inside the function, it specifies the value that will be returned back to the caller
+
+#	can you explain switch statements in javascript
+Answer: A switch statement is a control flow statement in JavaScript that allows you to evaluate an expression and choose 
+	different paths of execution based on different cases. It's useful when you have multiple conditions to check and 
+	you want to avoid using multiple if-else statements.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+#	Node.js is an open-source, cross-platform runtime environment that allows you to run JavaScript code on the server side. 
+	This means you can build server applications using JavaScript, which is traditionally a client-side language.
+
+#	🔥 JavaScript Array Methods List 🔥
+	
+	📌 1. Adding & Removing Elements
+		push() – Add to end
+		pop() – Remove from end
+		unshift() – Add to start
+		shift() – Remove from start
+		splice() – Add/remove elements at any position
+		slice() – Extract a portion (without modifying original)
+	📌 2. Searching & Finding Elements
+		indexOf() – Find first index of value
+		lastIndexOf() – Find last index of value
+		find() – Find first element that matches condition
+		findIndex() – Find index of first matching element
+		includes() – Check if an element exists
+	📌 3. Iterating & Transforming
+		forEach() – Loop through each element (no return)
+		map() – Transform each element (returns new array)
+		filter() – Get elements that match a condition
+		reduce() – Reduce array to a single value
+	📌 4. Sorting & Reversing
+		sort() – Sort array (default is lexicographic)
+		reverse() – Reverse array order
+	📌 5. Checking Conditions
+		some() – Check if at least one element meets condition
+		every() – Check if all elements meet condition
+	📌 6. Joining & Converting
+		join() – Convert array to string
+		toString() – Convert array to string
+	📌 7. Creating & Filling Arrays
+		Array.from() – Convert iterable to array
+		Array.of() – Create array from arguments
+		fill() – Fill array with static value
+	📌 8. Merging & Copying
+		concat() – Merge multiple arrays
+		flat() – Flatten nested arrays
+		flatMap() – Map & flatten in one step
+		copyWithin() – Copy part of array within itself
+	📌 9. Advanced Methods
+		entries() – Get key-value pairs as iterator
+		keys() – Get keys of array as iterator
+		values() – Get values of array as iterator
