@@ -1,7 +1,7 @@
 
 	::	JAVASCRIPT QUESTIONS	::
 
-#	What is js ? And where it is commmonly used ?
+#	What is js ? And where it is commonly used ?
 Answer: JavaScript (JS) is a high-level, interpreted programming language primarily used to create dynamic and interactive web applications. 
 	It is a single-threaded, dynamically typed, and event-driven language that runs in the browser as well as on the server using environments like Node.js. 
 	
@@ -157,9 +157,85 @@ Answer: Truthy values are values that evaluate to true when coerced to a boolean
 Answer: As a name suggest is Not a Number function checks if given value is not a Number. If the output cannot be coersed or converted into a number
 	then isNaN returns True ,(Although type of NaN is Number it still treated as a number.
 -----------------------------------------------------------------------------------------------------------------------------------------------
+#	What is an Operator?
+Answer: In JavaScript, an operator is a symbol that performs an operation on one or more operands, such as variables or values, and returns a result.
+	
+	Arithmetic Operators :
+		used to perform mathematical calculations such as addition, multiplication, subtraction, division, etc. on numbers
+		JS suppports Arithmetic Operators are :
+			 + (Addition), - (Subtraction), * (Multiplication), / (Division), % (Modulus), ++ (Increment), -- (Decrement)
+	
+	Comparison Operators :
+		used to compare two values and returns a boolean result (true or false). 
+		JavaScript supports comparison operators are :
+		  == (Equal) - Checks if the value of two operands is equal or not. If yes, then the condition becomes true.
+		  != (Not Equal) - Checks if the value of two operands is equal or not. If the values are not equal, then the condition becomes true.
+		  === (Strict equality) - It checks whether the value and data type of the variable is equal or not. If yes, then the condition becomes true.
+		  !== (Strict inequality) - It checks whether the value and data type of the variable is equal or not. 
+						If the values are not equal, then the condition becomes true.
+		  > (Greater than) - Checks if the value of the left operand is greater than the value of the right operand. 
+					If yes, then the condition becomes true.
+		  < (Less than) - Checks if the value of the left operand is less than the value of the right operand. 
+					If yes, then the condition becomes true.
+		  >= (Greater than or Equal to) - Checks if the value of the left operand is greater than or equal to the value of the right operand. 
+							If yes, then the condition becomes true.
+	
+		  <= (Less than or Equal to) - Checks if the value of the left operand is less than or equal to the value of the right operand. 
+						If yes, then the condition becomes true.
+
+	Logical (or Relational) Operators
+
+
+	Assignment Operators
+
+
+
+
 #	Use of typeof operator ?
 Answer: The typeof operator in JavaScript is used to determine the type of a given value or a variable and It returns a string.
 	It helps in type checking during debugging or handling data differntly based on its type.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+#	if...else statement ?
+Answer: The JavaScript if...else statement executes a block of code when the specified condition is true. 
+	When the condition is false the else block will be executed. The if-else statements can be used to control the flow of execution 
+	of a program based on different conditions.
+
+#	while loop ?
+Answer: while loop is to execute a statement or code block repeatedly as long as an expression is true. 
+	Once the expression becomes false, the loop terminates.
+
+#	do...while loop ?
+Answer: The do...while loop is similar to the while loop except that the condition check happens at the end of the loop. 
+	This means that the loop will always be executed at least once, even if the condition is false. 
+
+#	while vs. for Loops ?
+Asnwer: The JavaScript while loop is similar to the for loop with the first and third expressions omitted. 
+	A for loop is generally used when the number of iteration is fixed and known but we use the while loop whne the number of iterations is not known.
+
+#	for loop ?
+Answer: The JavaScript for loop is used to execute a block of code repeteatedly, until a specified condition evaluates to false. 
+	It can be used for iteration if the number of iteration is fixed and known
+
+#	for...in Loop ?
+Answer: The for...in loop in JavaScript is used to loop through an object's properties. 
+	The JavaScript for...in loop is a variant of the for loop. 
+	The for loop can't be used to traverse through the object properties. 
+	So, the for...in loop is introduced to traverse through all object properties.
+
+	The for...in loop in JavaScript can also be used to iterate through the elements of an array. 
+	However, it is not recommended to do this as this is less efficient than using a for...of loop.
+
+#	for...of Loop ?
+Asnwer: The for...of loop in JavaScript is used to traverse elements of the iterable object. 
+	In each iteration, it gives an element of the iterable object. Iterable objects include arrays, strings, maps, sets, and generators.
+
+	The JavaScript for...of loop is a much more efficient way to iterate over iterables than using a for...in loop. 
+	The for...of loop iterates over the property value while the for...in loop is used to iterate through the keys (property name) of an object.
+
+#	switch case ?
+Answer: The JavaScript switch case is a conditional statement is used to execute different blocks of code depending on the value of an expression. 
+	The expression is evaluated, and if it matches the value of one of the case labels, the code block associated with that case is executed. 
+	If none of the case labels match the value of the expression, the code block associated with the default label is executed.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 #	What is Hoisting ?
 Answer: In case of any other programming languages calling a function or variable it is declared will throw an error. But due to weird nature of js,
@@ -494,7 +570,7 @@ How do you use Destructuring Assignment to swap variables?
 
 What is the result of the spread operator array shown below?
 
- Which keyword can be used to deploy inheritance in ES6?
+Which keyword can be used to deploy inheritance in ES6?
 
 What are the object oriented features supported in ES6.
 
@@ -614,9 +690,21 @@ Answer: The Spread operator (represented as three dots or …) is used on iterab
 # Why do we need callbacks ?
 # What is a callback hell ?
 # What is promise chaining ?
-# What is a strict mode in javascript ?
-# Why do you need strict mode ?
+
+#	What is a strict mode in javascript ? Why do you need strict mode ?
+Answer: In JavaScript, the strict mode is introduced in the ES5 (ECMAScript 2009). The purpose behind introducing the "strict mode" is to make 
+	the JavaScript code more secure.
+
+	The 'use strict' literal expression is used to add the strict mode in the JavaScript code. 
+	It removes the silent errors from the code, such as you can't use the variable without declaration, 
+	you can't modify the readable property of the object, etc.
+
+
 # How do you declare strict mode ?
+Answer We should write 'use strict'; to the top of your code
+
+
+
 # What is the difference between window and document ?
 # What is the use of setTimeout ?
 # What is the use of setInterval ?
